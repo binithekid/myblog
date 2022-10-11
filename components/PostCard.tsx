@@ -44,7 +44,7 @@ const PostCard = ({ post }: { post: Posts }) => {
             {post.author.name}
           </p>
         </div>
-        <div className='font-medium text-gray-700  '>
+        <div className='font-medium text-gray-700 '>
           <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
         </div>
       </div>
