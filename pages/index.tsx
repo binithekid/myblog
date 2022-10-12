@@ -7,7 +7,7 @@ import { FeaturedPosts } from "../sections";
 const Home: NextPage = ({ posts }: any) => {
   return (
     <div className='flex flex-col min-h-screen'>
-      <div className='container mx-auto px-10 mb-8'>
+      <div className='container mx-auto  mb-8'>
         <Head>
           <title>Blog</title>
           <link rel='icon' href='/favicon.ico' />

@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-
+import React from "react";
 import Link from "next/link";
+import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const categories = [
   { name: "React", slug: "react" },
@@ -11,19 +11,36 @@ const categories = [
 
 const Header = () => {
   return (
-    <div className='container mx-auto px-10 mb-8'>
-      <div className='border-b w-full inline-block border-blue-400 py-8'>
+    <div className='mx-auto px-10 mb-8 bg-white border-b'>
+      <div className='w-full inline-block py-8'>
         <div className='md:float-left block'>
           <Link href='/'>
             <span className='cursor-pointer font-bold text-4xl text-gray font-inter'>
-              GraphCMS
+              TruthSeekers
+            </span>
+          </Link>
+        </div>
+        <div className='hidden md:float-right md:contents items-center'>
+          <Link href='https://www.bbc.co.uk/sport/football'>
+            <span className='md:float-right mt-3 text-gray ml-8 cursor-pointer font-light hover:opacity-70'>
+              <FaYoutube />
+            </span>
+          </Link>
+          <Link href='https://www.bbc.co.uk/sport/football'>
+            <span className='md:float-right mt-3 text-gray ml-8 cursor-pointer font-light hover:opacity-70'>
+              <FaInstagram />
+            </span>
+          </Link>
+          <Link href='https://www.bbc.co.uk/sport/football'>
+            <span className='md:float-right mt-3 text-gray ml-8 cursor-pointer font-light hover:opacity-70'>
+              <FaTwitter />
             </span>
           </Link>
         </div>
         <div className='hidden md:float-left md:contents'>
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
-              <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
+              <span className='md:float-right mt-2 align-middle text-gray ml-8 cursor-pointer font-light hover:opacity-70'>
                 {category.name}
               </span>
             </Link>
