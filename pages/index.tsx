@@ -3,6 +3,7 @@ import Head from "next/head";
 import { PostCard, Categories, PostWidget, Footer } from "../components";
 import { getPosts } from "../services";
 import { FeaturedPosts } from "../sections";
+import HomePageFeature from "../components/HomePageFeature";
 
 const Home: NextPage = ({ posts }: any) => {
   return (
@@ -12,7 +13,8 @@ const Home: NextPage = ({ posts }: any) => {
           <title>Blog</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <FeaturedPosts />
+        {/* <FeaturedPosts /> */}
+        <HomePageFeature />
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className='lg:col-span-8 col-span-1'>
             {posts.map((post: any) => (

@@ -20,7 +20,7 @@ interface Posts {
 
 const PostCard = ({ post }: { post: Posts }) => {
   return (
-    <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
+    <div className='bg-white shadow-sm rounded-lg p-0 lg:p-8 pb-12 mb-8'>
       <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
         <img
           src={post.featuredImage.url}
@@ -48,7 +48,7 @@ const PostCard = ({ post }: { post: Posts }) => {
           <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
         </div>
       </div>
-      <p className='text-lg text-gray-700 font-normal px-4 lg:px-1 mb-3'>
+      <p className='text-lg text-gray-700 px-4 lg:px-1 mb-3 font-light'>
         {post.excerpt}
       </p>
       <div className=''>
