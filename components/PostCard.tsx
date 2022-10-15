@@ -28,22 +28,10 @@ const PostCard = ({ post }: { post: Posts }) => {
           className='object-top absolute h-80 w-full object.cover shadow-lg rounded-t-lg lg:rounded-lg'
         />
       </div>
-      <h1 className='transition duration-100 text-left mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold '>
+      <h1 className='transition ease-in-out duration-500 text-left mb-2 cursor-pointer hover:opacity-75 text-3xl font-semibold font-inter ransition'>
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
-      <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
-        <div className='flex items-center justify center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-          <img
-            src={post.author.photo.url}
-            alt={post.author.name}
-            className='align-middle rounded-full'
-            height='30px'
-            width='30px'
-          />
-          <p className='inline align-middle text-gray-700 ml-2 text-lg'>
-            {post.author.name}
-          </p>
-        </div>
+      <div className='block lg:flex  mb-2 w-full'>
         <div className='font-medium text-gray-700 '>
           <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
         </div>
