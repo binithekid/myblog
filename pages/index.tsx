@@ -1,9 +1,10 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { PostCard, Categories, PostWidget, Socials } from "../components";
-import { getCategoryPost, getPosts } from "../services";
+import { getCategoryPost, getPosts, getMostRecentPost } from "../services";
 import HomePageFeature from "../components/HomePageFeature";
 import { useEffect, useState } from "react";
+import Slider from "../components/Slider";
 
 const Home: NextPage = ({ posts }: any) => {
   const [gridItems, setGridItems] = useState([]);

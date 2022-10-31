@@ -59,3 +59,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.fade-anim img {
+  animation: fadeAnim 2s ease-out;
+}
+@keyframes fadeAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

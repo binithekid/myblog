@@ -1,6 +1,9 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 interface Posts {
   excerpt: string;
@@ -19,8 +22,36 @@ interface Posts {
 }
 
 const PostCard = ({ post }: { post: Posts }) => {
+  const boxVariant = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        delay: 0.4,
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+    hidden: { y: 40, opacity: 0 },
+  };
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
   return (
-    <div className='bg-white shadow-sm rounded-lg p-0 lg:p-8 pb-12 mb-8'>
+    <motion.div
+      variants={boxVariant}
+      initial='hidden'
+      animate='visible'
+      ref={ref}
+      animate={control}
+      className='bg-white shadow-sm rounded-lg p-0 lg:p-8 pb-12 mb-8'>
       <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
         <img
           src={post.featuredImage.url}
@@ -46,7 +77,7 @@ const PostCard = ({ post }: { post: Posts }) => {
           </span>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
