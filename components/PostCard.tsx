@@ -48,7 +48,6 @@ const PostCard = ({ post }: { post: Posts }) => {
     <motion.div
       variants={boxVariant}
       initial='hidden'
-      animate='visible'
       ref={ref}
       animate={control}
       className='bg-white shadow-sm rounded-lg p-0 lg:p-8 pb-12 mb-8'>
