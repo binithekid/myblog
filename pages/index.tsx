@@ -30,7 +30,7 @@ const Home: NextPage = ({ posts }: any) => {
 
             <div className='flex flex-row flex-wrap'>
               {gridItems &&
-                gridItems?.map((gridItem) => (
+                gridItems?.map((gridItem: any) => (
                   <div className='w-1/2'>
                     <div className='m-3 shadow-sm rounded-b-lg bg-white'>
                       <img
