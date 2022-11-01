@@ -27,12 +27,13 @@ const HomePageFeature = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
+        ease: "easeIn",
         type: "spring",
-        stiffness: 100,
+        stiffness: 50,
       },
     },
-    hidden: { y: 40, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
   };
 
   return (

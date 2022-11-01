@@ -27,14 +27,16 @@ const PostCard = ({ post }: { post: Posts }) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        delay: 0.4,
+        duration: 0.5,
+        ease: "easeIn",
         type: "spring",
-        stiffness: 100,
+        stiffness: 50,
+        delay: 0.2,
       },
     },
-    hidden: { y: 40, opacity: 0 },
+    hidden: { y: 20, opacity: 0 },
   };
+
   const control = useAnimation();
   const [ref, inView] = useInView();
 
