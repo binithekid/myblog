@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { getMostRecentPost } from "../services";
 import { motion } from "framer-motion";
 import sunsetboat from "../public/sunsetboat.jpeg";
+import { AiFillStar } from "react-icons/ai";
 
 type RecentPost = {
   slug: any;
@@ -43,18 +44,20 @@ const HomePageFeature = () => {
         initial='hidden'
         animate='visible'
         className='flex flex-nowrap overflow-hidden'>
-        <div className='flex flex-row w-full mb-8 gap-2 bg-white shadow-sm rounded-lg p-8 transition-transform'>
+        <div className='flex flex-row w-full mb-8 gap-2 bg-white shadow-sm  transition-transform'>
           <div className='w-1/2'>
             <img src={sunsetboat.src} className='shadow-sm' />
           </div>
           <div className='w-1/2'>
-            <h1 className='font-bold text-4xl text-gray font-inter mb-1 ml-5'>
+            <div className='flex flex-row'>
+              <h5 className='ml-5 mt-8'>Editor's Pick</h5>
+              <AiFillStar className='mt-10 ml-1' size='0.6rem' />
+            </div>
+            <h1 className='text-4xl text-gray font-inter mt-1 mb-1 ml-5'>
               Do not be foolish
             </h1>
-            <div className='ml-5 mb-1 text-gray-700 font-medium'>
-              <span>October 13, 2022</span>
-            </div>
-            <p className='ml-5 font-light text-lg text-gray-700'>
+            <h4 className='ml-5 mt-1 mb-2'>24th Oct 2022</h4>
+            <p className='ml-5 font-light text-md text-gray-700 mr-10'>
               Ms Veasey, who represented herself, said video evidence showed 27
               people in her home but maintained it was not a party. She admitted
               she was in the wrong for inviting people from outside her
@@ -62,13 +65,10 @@ const HomePageFeature = () => {
               people. She added she would have paid a smaller fine but felt the
               £10,000 fine was unjust. "It seems like a bit of a con. They're
               trying to pull money out of people, pushing people through court
-              cases," she said. "I think it's a large waste of time. I've had
-              numerous court cases, and they probably spent more on these court
-              cases out of the taxpayers' money than the fine would have been in
-              the first place." S
+              cases," she said.
             </p>
             <Link href={`/post/first-post`}>
-              <button className='rounded-lg ml-5 mt-5 px-8 py-3 shadow-sm transition duration-500 transform hover:-translate-y-1 hover:shadow-lg inline-block border'>
+              <button className='border-gray-600 rounded-lg ml-5 mt-6 px-8 py-3 shadow-sm transition duration-500 transform hover:-translate-y-1 hover:shadow-lg inline-block border'>
                 Read More
               </button>
             </Link>
