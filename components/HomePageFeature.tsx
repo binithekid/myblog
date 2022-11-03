@@ -57,7 +57,7 @@ const HomePageFeature = () => {
               Do not be foolish
             </h1>
             <h4 className='ml-5 mt-1 mb-2'>24th Oct 2022</h4>
-            <p className='ml-5 font-light text-md text-gray-700 mr-10'>
+            <p className='ml-5 text-md text-gray-700 mr-10 leading-7'>
               Ms Veasey, who represented herself, said video evidence showed 27
               people in her home but maintained it was not a party. She admitted
               she was in the wrong for inviting people from outside her
@@ -68,7 +68,7 @@ const HomePageFeature = () => {
               cases," she said.
             </p>
             <Link href={`/post/first-post`}>
-              <button className='border-gray-600 rounded-lg ml-5 mt-6 px-8 py-3 shadow-sm transition duration-500 transform hover:-translate-y-1 hover:shadow-lg inline-block border'>
+              <button className='rounded-lg ml-5 mt-6 px-8 py-3 shadow-sm transition duration-500 transform hover:-translate-y-1 hover:shadow-lg inline-block border'>
                 Read More
               </button>
             </Link>

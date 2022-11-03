@@ -31,7 +31,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className='mx-auto px-10 mb-8 bg-white shadow-md'>
+      <div className='mx-auto px-10 mb-8 bg-white shadow-sm'>
         <div className='w-full inline-block py-8'>
           <div className='md:float-left block'>
             <Link href='/'>
