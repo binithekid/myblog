@@ -53,7 +53,7 @@ const HomePageFeature = () => {
               <h5 className='ml-5 mt-10'>Editor's Pick</h5>
               <AiFillStar className='mt-12 ml-1' size='0.6rem' />
             </div>
-            <h1 className='text-4xl text-gray font-inter mt-1 mb-1 ml-5'>
+            <h1 className='text-3xl text-gray font-inter mt-1 mb-1 ml-5'>
               Do not be foolish
             </h1>
             <h4 className='ml-5 mt-1 mb-2'>24th Oct 2022</h4>

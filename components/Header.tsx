@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FiMenu } from "react-icons/fi";
+import Sidebar from "./Sidebar";
 
 const categories = [
   { name: "React", slug: "react" },
@@ -10,6 +12,16 @@ const categories = [
 ];
 
 const Header = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  useEffect(() => {
+    if (showSidebar) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [showSidebar]);
+
   return (
     <>
       <div className='mx-auto px-10 h-10 bg-black border-b '>
@@ -32,26 +44,32 @@ const Header = () => {
         </div>
       </div>
       <div className='flex items-center justify-center mx-auto px-10 mb-8 bg-white shadow-sm'>
-        <div className='w-full py-6 flex items-center justify-center'>
+        <div>
+          <FiMenu
+            onClick={() => setShowSidebar(!showSidebar)}
+            className='cursor-pointer text-xl ease-in-out duration-300 hover:opacity-40'
+          />
+        </div>
+        <div className='w-full py-8 flex items-center justify-center'>
           <Link href='/'>
             <span className='cursor-pointer font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
               TruthSeekers.
             </span>
           </Link>
         </div>
+        {/* <div className='mb-8'>
+          {categories.map((category) => (
+            <Link key={category.slug} href={`/category/${category.slug}`}>
+              <span className='md:float-right align-middle text-gray ml-8 cursor-pointer font-medium hover:opacity-70'>
+                {category.name}
+              </span>
+            </Link>
+          ))}
+        </div> */}
       </div>
+      <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
     </>
   );
 };
 
 export default Header;
-
-// <div className='hidden md:float-left md:contents'>
-//     {categories.map((category) => (
-//       <Link key={category.slug} href={`/category/${category.slug}`}>
-//         <span className='md:float-right mt-2 align-middle text-gray ml-8 cursor-pointer font-medium hover:opacity-70'>
-//           {category.name}
-//         </span>
-//       </Link>
-//     ))}
-//   </div>
