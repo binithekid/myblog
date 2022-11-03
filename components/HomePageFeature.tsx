@@ -50,8 +50,8 @@ const HomePageFeature = () => {
           </div>
           <div className='w-1/2'>
             <div className='flex flex-row'>
-              <h5 className='ml-5 mt-8'>Editor's Pick</h5>
-              <AiFillStar className='mt-10 ml-1' size='0.6rem' />
+              <h5 className='ml-5 mt-10'>Editor's Pick</h5>
+              <AiFillStar className='mt-12 ml-1' size='0.6rem' />
             </div>
             <h1 className='text-4xl text-gray font-inter mt-1 mb-1 ml-5'>
               Do not be foolish

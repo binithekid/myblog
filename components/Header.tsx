@@ -31,24 +31,13 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className='mx-auto px-10 mb-8 bg-white shadow-sm'>
-        <div className='w-full inline-block py-8'>
-          <div className='md:float-left block'>
-            <Link href='/'>
-              <span className='cursor-pointer font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
-                TruthSeekers.
-              </span>
-            </Link>
-          </div>
-          <div className='hidden md:float-left md:contents'>
-            {categories.map((category) => (
-              <Link key={category.slug} href={`/category/${category.slug}`}>
-                <span className='md:float-right mt-2 align-middle text-gray ml-8 cursor-pointer font-medium hover:opacity-70'>
-                  {category.name}
-                </span>
-              </Link>
-            ))}
-          </div>
+      <div className='flex items-center justify-center mx-auto px-10 mb-8 bg-white shadow-sm'>
+        <div className='w-full py-6 flex items-center justify-center'>
+          <Link href='/'>
+            <span className='cursor-pointer font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
+              TruthSeekers.
+            </span>
+          </Link>
         </div>
       </div>
     </>
@@ -56,3 +45,13 @@ const Header = () => {
 };
 
 export default Header;
+
+// <div className='hidden md:float-left md:contents'>
+//     {categories.map((category) => (
+//       <Link key={category.slug} href={`/category/${category.slug}`}>
+//         <span className='md:float-right mt-2 align-middle text-gray ml-8 cursor-pointer font-medium hover:opacity-70'>
+//           {category.name}
+//         </span>
+//       </Link>
+//     ))}
+//   </div>
