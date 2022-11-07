@@ -43,7 +43,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className='flex items-center justify-center mx-auto px-10 mb-8 bg-white shadow-sm'>
+      <div className='flex items-center justify-center mx-auto px-10 mb-8 bg-white shadow-sm '>
         <div>
           <FiMenu
             onClick={() => setShowSidebar(!showSidebar)}
