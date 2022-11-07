@@ -44,7 +44,7 @@ const HomePageFeature = () => {
         initial='hidden'
         animate='visible'
         className='flex flex-nowrap overflow-hidden'>
-        <div className='flex flex-row w-full mb-8 gap-2 bg-white shadow-sm  transition-transform'>
+        <div className='flex flex-row w-full mb-8 gap-2 bg-white shadow-sm transition-transform'>
           <div className='w-1/2'>
             <img src={sunsetboat.src} className='shadow-sm' />
           </div>
@@ -56,8 +56,8 @@ const HomePageFeature = () => {
             <h1 className='text-3xl text-gray font-inter mt-1 mb-1 ml-5'>
               Do not be foolish
             </h1>
-            <h4 className='ml-5 mt-1 mb-2'>24th Oct 2022</h4>
-            <p className='ml-5 text-md text-gray-700 mr-10 leading-7'>
+            <h4 className='ml-5 mt-1 mb-1'>24th Oct 2022</h4>
+            <p className='ml-5 text-md text-zinc-800 mr-10 leading-7'>
               Ms Veasey, who represented herself, said video evidence showed 27
               people in her home but maintained it was not a party. She admitted
               she was in the wrong for inviting people from outside her
@@ -68,7 +68,7 @@ const HomePageFeature = () => {
               cases," she said.
             </p>
             <Link href={`/post/first-post`}>
-              <button className='rounded-lg ml-5 mt-6 px-8 py-3 shadow-sm transition duration-500 transform hover:-translate-y-1 hover:shadow-lg inline-block border'>
+              <button className='border border-zinc-700 text-md rounded ml-5 mt-7 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-black'>
                 Read More
               </button>
             </Link>

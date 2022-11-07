@@ -1,10 +1,12 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { GrFormClose } from "react-icons/gr";
-import { ImNewspaper } from "react-icons/im";
-import { FaBook, FaHome, FaPencilAlt } from "react-icons/fa";
-import { MdEmail, MdOndemandVideo } from "react-icons/md";
+import { MdOndemandVideo, MdOutlineLibraryBooks } from "react-icons/md";
 import { IoChevronForward } from "react-icons/io5";
+import { HiOutlineChat } from "react-icons/hi";
+import { FiMail } from "react-icons/fi";
+import { BiNews } from "react-icons/bi";
+import { TiHomeOutline } from "react-icons/ti";
 
 const Sidebar = ({
   showSidebar,
@@ -36,15 +38,15 @@ const Sidebar = ({
           <Link href={"/"}>
             <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
               <div className='flex flex-row'>
-                <FaHome
+                <TiHomeOutline
                   style={{
-                    fill: "black",
-                    marginTop: "4px",
-                    fontSize: "1.2rem",
+                    color: "black",
+                    marginTop: "3px",
+                    fontSize: "1.3rem",
                   }}
                 />
                 <span
-                  className='align-middle cursor-pointer text-lg text-black ml-4 font-medium'
+                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
                   onClick={() => setShowSidebar(false)}>
                   Home
                 </span>
@@ -64,15 +66,15 @@ const Sidebar = ({
           <Link href={"/"}>
             <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
               <div className='flex flex-row'>
-                <ImNewspaper
+                <BiNews
                   style={{
-                    fill: "black",
-                    marginTop: "5px",
-                    fontSize: "1.2rem",
+                    color: "black",
+                    marginTop: "4px",
+                    fontSize: "1.3rem",
                   }}
                 />
                 <span
-                  className='align-middle cursor-pointer text-lg text-black ml-4'
+                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
                   onClick={() => setShowSidebar(false)}>
                   News
                 </span>
@@ -91,15 +93,15 @@ const Sidebar = ({
           <Link href={"/"}>
             <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
               <div className='flex flex-row'>
-                <FaPencilAlt
+                <HiOutlineChat
                   style={{
-                    fill: "black",
-                    marginTop: "5px",
-                    fontSize: "1.1rem",
+                    color: "black",
+                    marginTop: "3px",
+                    fontSize: "1.4rem",
                   }}
                 />
                 <span
-                  className='align-middle cursor-pointer text-lg text-black ml-4'
+                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-2'
                   onClick={() => setShowSidebar(false)}>
                   Opinion
                 </span>
@@ -126,7 +128,7 @@ const Sidebar = ({
                   }}
                 />
                 <span
-                  className='align-middle cursor-pointer text-lg text-black ml-4'
+                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
                   onClick={() => setShowSidebar(false)}>
                   Watch
                 </span>
@@ -145,15 +147,15 @@ const Sidebar = ({
           <Link href={"/"}>
             <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
               <div className='flex flex-row'>
-                <FaBook
+                <MdOutlineLibraryBooks
                   style={{
-                    fill: "black",
-                    marginTop: "5px",
-                    fontSize: "1.1rem",
+                    color: "black",
+                    marginTop: "3px",
+                    fontSize: "1.3rem",
                   }}
                 />
                 <span
-                  className='align-middle cursor-pointer text-lg text-black ml-4'
+                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
                   onClick={() => setShowSidebar(false)}>
                   Resources
                 </span>
@@ -173,15 +175,15 @@ const Sidebar = ({
           <Link href={"/"}>
             <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
               <div className='flex flex-row'>
-                <MdEmail
+                <FiMail
                   style={{
-                    fill: "black",
+                    color: "black",
                     marginTop: "5px",
-                    fontSize: "1.2rem",
+                    fontSize: "1.1rem",
                   }}
                 />
                 <span
-                  className='align-middle cursor-pointer text-lg text-black ml-4'
+                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
                   onClick={() => setShowSidebar(false)}>
                   Contact
                 </span>

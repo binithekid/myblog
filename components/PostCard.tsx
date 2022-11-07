@@ -52,30 +52,30 @@ const PostCard = ({ post }: { post: Posts }) => {
       initial='hidden'
       ref={ref}
       animate={control}
-      className='bg-white shadow-sm rounded-lg p-0 lg:p-8 pb-12 mb-8'>
+      className='bg-white shadow-sm p-0 lg:pb-8 mb-8 rounded-b-sm'>
       <div className='relative overflow-hidden shadow-md pb-80 mb-6'>
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className='object-top absolute h-80 w-full object.cover shadow-lg rounded-t-lg lg:rounded-lg'
+          className='object-top absolute h-80 w-full object.cover shadow-lg '
         />
       </div>
-      <h1 className='transition ease-in-out duration-500 text-left mb-2 cursor-pointer hover:opacity-75 text-3xl font-semibold font-inter ransition'>
+      <h1 className='transition ease-in-out duration-500 text-left text-gray  mt-1 mb-1 cursor-pointer hover:opacity-75 text-3xl font-semibold font-inter ml-4'>
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
-      <div className='block lg:flex  mb-2 w-full'>
-        <div className='font-medium text-gray-700 '>
+      <div className='block lg:flex mb-1 w-full'>
+        <div className='ml-4'>
           <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
         </div>
       </div>
-      <p className='text-lg text-gray-700 px-4 lg:px-1 mb-3 font-light'>
+      <p className='text-zinc-800 leading-7 lg:px-1 mb-1 ml-3 mr-2 text-ellipsis overflow-hidden line-clamp-3'>
         {post.excerpt}
       </p>
-      <div className=''>
+      <div className='mb-0'>
         <Link href={`/post/${post.slug}`}>
-          <span className='transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer hover:opacity-70 mt-3'>
-            Continue reading
-          </span>
+          <button className='ml-4 border border-zinc-700 text-md rounded mt-3 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-black'>
+            Continue Reading ..
+          </button>
         </Link>
       </div>
     </motion.div>
