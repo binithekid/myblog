@@ -3,8 +3,8 @@ import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Socials = () => {
   return (
-    <div className='bg-white shadow-sm rounded-lg p-8 mb-8 '>
-      <h3 className='text-xl mb-6 font-semibold border-b pb-4 '>Socials</h3>
+    <div className='bg-white shadow-sm rounded-sm p-4 mb-8'>
+      <h3 className='text-xl mb-5 font-medium border-b pb-2'>Socials</h3>
       <div className='flex flex-col '>
         <div className='mb-8 flex flex-row'>
           <FaTwitter size={32} style={{ fill: "#1DA1F2" }} />

@@ -1,9 +1,39 @@
 import React from "react";
+import Link from "next/link";
+import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className='flex justify-center align-middle w-full shadow-inner h-20 bottom-0'>
-      <p className='text-black font-semibold m-auto'>Hello</p>
+    <div className='flex w-full shadow-inner flex-col bottom-0'>
+      <div className='flex justify-center items-center'>
+        <Link href='/'>
+          <span className='cursor-pointer mt-10 font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
+            TruthSeekers.
+          </span>
+        </Link>
+      </div>
+      <div className='flex flex-row justify-center items-center'>
+        <div className='flex flex-row mb-4 gap-6'>
+          <Link href='https://www.bbc.co.uk/sport/football'>
+            <span className=' mt-3 text-gray cursor-pointer font-light hover:opacity-70 '>
+              <FaYoutube style={{ fill: "black" }} size={25} />
+            </span>
+          </Link>
+          <Link href='https://www.bbc.co.uk/sport/football'>
+            <span className=' mt-3 text-gray cursor-pointer font-light hover:opacity-70'>
+              <FaInstagram style={{ fill: "black" }} size={25} />
+            </span>
+          </Link>
+          <Link href='https://www.bbc.co.uk/sport/football'>
+            <span className=' mt-3 text-gray  cursor-pointer font-light hover:opacity-70'>
+              <FaTwitter style={{ fill: "black" }} size={25} />
+            </span>
+          </Link>
+        </div>
+      </div>
+      <div className='flex justify-center items-center mb-6 font-light text-sm'>
+        <p>Copyright &copy; 2022 TruthSeekers</p>
+      </div>
     </div>
   );
 };

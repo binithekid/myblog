@@ -60,20 +60,20 @@ const PostCard = ({ post }: { post: Posts }) => {
           className='object-top absolute h-80 w-full object.cover shadow-lg '
         />
       </div>
-      <h1 className='transition ease-in-out duration-500 text-left text-gray  mt-1 mb-1 cursor-pointer hover:opacity-75 text-3xl font-semibold font-inter ml-4'>
+      <h1 className='transition ease-in-out duration-500 text-left text-gray  mt-1 mb-1 cursor-pointer hover:opacity-75 text-3xl font-semibold font-inter ml-5'>
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className='block lg:flex mb-1 w-full'>
-        <div className='ml-4'>
+        <div className='ml-5'>
           <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
         </div>
       </div>
-      <p className='text-zinc-800 leading-7 lg:px-1 mb-1 ml-3 mr-2 text-ellipsis overflow-hidden line-clamp-3'>
+      <p className='text-zinc-800 leading-7 lg:px-1 mb-1 ml-4 mr-2 text-ellipsis overflow-hidden line-clamp-3'>
         {post.excerpt}
       </p>
       <div className='mb-0'>
         <Link href={`/post/${post.slug}`}>
-          <button className='ml-4 border border-zinc-700 text-md rounded mt-3 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-black'>
+          <button className='ml-5 border border-zinc-700 text-md rounded mt-3 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-black'>
             Continue Reading ..
           </button>
         </Link>

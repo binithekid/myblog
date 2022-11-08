@@ -5,6 +5,7 @@ import { getCategoryPost, getPosts, getMostRecentPost } from "../services";
 import HomePageFeature from "../components/HomePageFeature";
 import { useEffect, useState } from "react";
 import Newsletter from "../components/Newsletter";
+import Qutote from "../components/Qutote";
 
 const Home: NextPage = ({ posts }: any) => {
   const [gridItems, setGridItems] = useState([]);
@@ -55,6 +56,7 @@ const Home: NextPage = ({ posts }: any) => {
           <div className='lg:col-span-4 col-span-1'>
             <div className='relative'>
               <PostWidget />
+              <Qutote />
               <Categories />
               <Socials />
             </div>
