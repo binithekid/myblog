@@ -5,10 +5,13 @@ import { useInView } from "react-intersection-observer";
 import {
   EmailShareButton,
   FacebookShareButton,
-  RedditShareButton,
-  TwitterShareButton,
   WhatsappShareButton,
+  TwitterShareButton,
   TwitterIcon,
+  FacebookIcon,
+  EmailIcon,
+  RedditIcon,
+  WhatsappIcon,
 } from "react-share";
 
 const PostDetail = ({ post }: any) => {
@@ -111,25 +114,54 @@ const PostDetail = ({ post }: any) => {
         />
       </div>
       <div className='px-4 lg:px-0'>
-        <div className='font-light mb-1 px-6'>
-          <span className='mb-10'>
-            {moment(post.createdAt).format("MMM DD, YYYY")}
-          </span>
-        </div>
-        <h1 className='px-6 text-4xl text-gray font-inter mb-3 tracking-normal'>
+        <h1 className='px-6 text-4xl text-gray font-inter mb-2 tracking-normal'>
           {post.title}
         </h1>
-        <div>
-          <TwitterShareButton url={shareUrl}>
-            <TwitterIcon
-              size={32}
-              round={false}
-              iconFillColor='black'
-              bgStyle={{ fill: "none" }}
-            />
-          </TwitterShareButton>
+        <div className='px-6 flex flex-row '>
+          <div>
+            <p>{post.author.name}</p>
+          </div>
+          <div className='px-3 font-light'>
+            <p>|</p>
+          </div>
+          <div className='font-medium mb-1'>
+            <span className='mb-10'>
+              {moment(post.createdAt).format("MMM DD, YYYY")}
+            </span>{" "}
+          </div>
+          <div className='px-3'>
+            <p className='font-light'>|</p>
+          </div>
+          <div>
+            <TwitterShareButton url={shareUrl}>
+              <TwitterIcon
+                size={27}
+                round={false}
+                iconFillColor='black'
+                bgStyle={{ fill: "none" }}
+              />
+            </TwitterShareButton>
+
+            <FacebookShareButton url={shareUrl}>
+              <FacebookIcon
+                size={27}
+                round={false}
+                iconFillColor='black'
+                bgStyle={{ fill: "none" }}
+              />
+            </FacebookShareButton>
+
+            <EmailShareButton url={shareUrl}>
+              <EmailIcon
+                size={27}
+                round={false}
+                iconFillColor='black'
+                bgStyle={{ fill: "none" }}
+              />
+            </EmailShareButton>
+          </div>
         </div>
-        <div className=' px-6 mb-3'>
+        <div className='mt-1 px-6 mb-3'>
           <hr />
         </div>
 
