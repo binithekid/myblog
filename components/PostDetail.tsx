@@ -1,5 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import moment from "moment";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  RedditShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+  TwitterIcon,
+} from "react-share";
 
 const PostDetail = ({ post }: any) => {
   const getContentFragment = (index: any, text: any, obj: any, type: any) => {
@@ -30,7 +40,7 @@ const PostDetail = ({ post }: any) => {
         );
       case "paragraph":
         return (
-          <p key={index} className='mb-8'>
+          <p key={index} className='text-md text-zinc-800 leading-7 mb-3 px-6'>
             {modifiedText.map((item: any, i: any) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -47,10 +57,11 @@ const PostDetail = ({ post }: any) => {
       case "image":
         return (
           <img
+            className='px-6 py-6'
             key={index}
             alt={obj.title}
             height={obj.height}
-            width={obj.width}
+            width={"100%"}
             src={obj.src}
           />
         );
@@ -58,36 +69,70 @@ const PostDetail = ({ post }: any) => {
         return modifiedText;
     }
   };
+
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeIn",
+        type: "spring",
+        stiffness: 50,
+        delay: 0.2,
+      },
+    },
+    hidden: { y: 20, opacity: 0 },
+  };
+
+  const shareUrl = post.slug;
+
   return (
-    <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
+    <motion.div
+      variants={boxVariant}
+      initial='hidden'
+      ref={ref}
+      animate={control}
+      className='bg-white shadow-sm rounded-sm pb-12 mb-8'>
       <div className='relative overflow-hidden shadow-sm mb-6'>
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className='object-top h-full w-full rounded-t-lg'
+          className='object-top h-full w-full'
         />
       </div>
       <div className='px-4 lg:px-0'>
-        <div className='flex items-center mb-8 w-full'>
-          <div className='flex items-center justify center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-            <img
-              src={post.author.photo.url}
-              alt={post.author.name}
-              className='align-middle rounded-full'
-              height='30px'
-              width='30px'
-            />
-            <p className='inline align-middle text-gray-700 ml-2 text-lg'>
-              {post.author.name}
-            </p>
-          </div>
-          <div className='font-medium text-gray-700  '>
-            <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
-          </div>
+        <div className='font-light mb-1 px-6'>
+          <span className='mb-10'>
+            {moment(post.createdAt).format("MMM DD, YYYY")}
+          </span>
         </div>
-        <h1 className='mb-8 text-3xl font-semibold tracking-normal'>
+        <h1 className='px-6 text-4xl text-gray font-inter mb-3 tracking-normal'>
           {post.title}
         </h1>
+        <div>
+          <TwitterShareButton url={shareUrl}>
+            <TwitterIcon
+              size={32}
+              round={false}
+              iconFillColor='black'
+              bgStyle={{ fill: "none" }}
+            />
+          </TwitterShareButton>
+        </div>
+        <div className=' px-6 mb-3'>
+          <hr />
+        </div>
+
         {post.content.raw.children.map((typeObj: any, index: any) => {
           const children = typeObj.children.map((item: any, itemIndex: any) =>
             getContentFragment(itemIndex, item.text, item, item.type)
@@ -96,7 +141,7 @@ const PostDetail = ({ post }: any) => {
           return getContentFragment(index, children, typeObj, typeObj.type);
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

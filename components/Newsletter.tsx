@@ -5,28 +5,37 @@ import * as Yup from "yup";
 
 const Newsletter = () => {
   const [successMessage, setSuccessMessage] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(false);
 
-  //Formik Logic
   const formik = useFormik({
     initialValues: {
       email: "",
     },
-    //Validate Form
+
     validationSchema: Yup.object({
       email: Yup.string()
         .email("Invalid email address")
         .required("email is required"),
     }),
 
-    onSubmit: (values) => {
-      console.log(values);
-      setSuccessMessage(true);
+    onSubmit: async (values) => {
+      await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then(() => {
+        setSuccessMessage(true);
+        setTimeout(() => {
+          setSuccessMessage(false);
+        }, 5000);
+        formik.resetForm();
+      });
     },
   });
 
   return (
-    <div className='flex flexrow w-full bg-slate-200'>
+    <div className='flex flexrow w-full  bg-slate-200'>
       <div className='w-1/2 p-10'>
         <h1 className='ml-4 text-3xl text-gray font-inter mb-2'>
           Subscribe to our newsletter!
@@ -39,8 +48,8 @@ const Newsletter = () => {
           quae omnis pariatur obcaecati possimus nisi ea iste
         </p>
       </div>
-      <div className='w-1/2 flex justify-center items-center'>
-        <form className='w-1/2' onSubmit={formik.handleSubmit}>
+      <div className='w-1/2 flex justify-center items-center flex-col'>
+        <form className='w-1/2 ' onSubmit={formik.handleSubmit}>
           <input
             className='w-4/5 shadow-sm text-md rounded-sm p-2 focus:border-teal-500 focus:ring-teal-500 border-slate-400'
             name='email'
@@ -55,7 +64,11 @@ const Newsletter = () => {
             <GrSend style={{ fontSize: "0.8rem" }} />
           </button>
         </form>
-        {}
+        {successMessage && (
+          <span className='mt-4 font-light text-green-500'>
+            Your email has been submitted!
+          </span>
+        )}
       </div>
     </div>
   );

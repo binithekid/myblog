@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
@@ -14,6 +14,20 @@ const categories = [
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
+  const ref: React.MutableRefObject<null | HTMLDivElement> = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: any) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setShowSidebar(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
   useEffect(() => {
     if (showSidebar) {
       document.body.style.overflow = "hidden";
@@ -23,7 +37,7 @@ const Header = () => {
   }, [showSidebar]);
 
   return (
-    <>
+    <div>
       <div className='mx-auto px-10 h-10 bg-black border-b '>
         <div className='hidden md:float-right md:contents items-center'>
           <Link href='https://www.bbc.co.uk/sport/football'>
@@ -44,7 +58,7 @@ const Header = () => {
         </div>
       </div>
       <div className='flex items-center justify-center mx-auto px-10 mb-8 bg-white shadow-sm '>
-        <div>
+        <div ref={ref}>
           <FiMenu
             onClick={() => setShowSidebar(!showSidebar)}
             className='cursor-pointer text-xl ease-in-out duration-300 hover:opacity-40'
@@ -67,8 +81,10 @@ const Header = () => {
           ))}
         </div> */}
       </div>
-      <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
-    </>
+      <div ref={ref}>
+        <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
+      </div>
+    </div>
   );
 };
 

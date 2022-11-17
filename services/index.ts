@@ -280,3 +280,15 @@ export const getMostRecentPost = async () => {
 
   return result.posts;
 };
+
+export const SubmitEmail = async (obj: any) => {
+  const result = await fetch("/api/email", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(obj),
+  });
+
+  return result.json();
+};

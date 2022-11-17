@@ -4,7 +4,7 @@ import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className='flex w-full shadow-inner flex-col bottom-0'>
+    <div className='flex w-full flex-col bottom-0 border-t-2'>
       <div className='flex justify-center items-center'>
         <Link href='/'>
           <span className='cursor-pointer mt-10 font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
@@ -25,13 +25,13 @@ const Footer = () => {
             </span>
           </Link>
           <Link href='https://www.bbc.co.uk/sport/football'>
-            <span className=' mt-3 text-gray  cursor-pointer font-light hover:opacity-70'>
+            <span className=' mt-3 text-gray cursor-pointer font-light hover:opacity-70'>
               <FaTwitter style={{ fill: "black" }} size={25} />
             </span>
           </Link>
         </div>
       </div>
-      <div className='flex justify-center items-center mb-6 font-light text-sm'>
+      <div className='flex justify-center items-center mb-8 font-normal text-sm'>
         <p>Copyright &copy; 2022 TruthSeekers</p>
       </div>
     </div>

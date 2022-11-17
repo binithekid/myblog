@@ -21,14 +21,12 @@ const Home: NextPage = ({ posts }: any) => {
           <title>Blog</title>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        {/* <FeaturedPosts /> */}
         <HomePageFeature />
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className='lg:col-span-8 col-span-1'>
             {posts.map((post: any) => (
               <PostCard post={post.node} key={post.title} />
             ))}
-
             <div className='flex flex-row flex-wrap'>
               {gridItems &&
                 gridItems?.map((gridItem: any) => (

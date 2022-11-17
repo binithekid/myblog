@@ -3,13 +3,13 @@ import { useRouter } from "next/router";
 import { getPosts, getPostDetails } from "../../services";
 import {
   PostWidget,
-  Categories,
-  Author,
   PostDetail,
   CommentsForm,
   Comments,
   Loader,
+  Socials,
 } from "../../components";
+import Qutote from "../../components/Qutote";
 
 const PostDetails = ({ post }: any) => {
   const router = useRouter();
@@ -19,21 +19,21 @@ const PostDetails = ({ post }: any) => {
   }
 
   return (
-    <div className='container mx-auto px-10 mb-8'>
+    <div className='container mx-auto mb-8'>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
         <div className='col-span-1 lg:col-span-8'>
           <PostDetail post={post} />
-          <Author author={post.author} />
           <CommentsForm slug={post.slug} />
           <Comments slug={post.slug} />
         </div>
         <div className='col-span-1 lg:col-span-4'>
-          <div className='relative lg:sticky top-8'>
+          <div className='relative'>
             <PostWidget
               slug={post.slug}
               categories={post.categories.map((category: any) => category.slug)}
             />
-            <Categories />
+            <Qutote />
+            <Socials />
           </div>
         </div>
       </div>
