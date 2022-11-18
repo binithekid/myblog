@@ -66,7 +66,7 @@ const Header = () => {
         </div>
         <div className='w-full py-8 flex items-center justify-center'>
           <Link href='/'>
-            <span className='cursor-pointer font-bold text-5xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
+            <span className='cursor-pointer font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
               TruthSeekers.
             </span>
           </Link>

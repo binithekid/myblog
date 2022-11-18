@@ -56,7 +56,7 @@ const Sidebar = ({
               </div>
             </div>
           </Link>
-          <Link href={"/"}>
+          <Link href={"/news"}>
             <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
               <div className='flex flex-row'>
                 <BiNews

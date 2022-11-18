@@ -162,7 +162,7 @@ const PostDetail = ({ post }: any) => {
           </div>
         </div>
         <div className='mt-1 px-6 mb-3'>
-          <hr />
+          <hr style={{ backgroundColor: "black" }} />
         </div>
 
         {post.content.raw.children.map((typeObj: any, index: any) => {
