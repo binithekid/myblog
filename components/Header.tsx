@@ -39,7 +39,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className='mx-auto px-10 h-10 bg-gradient-to-r from-sky-200 to-blue-600 border-b '>
+      <div className='mx-auto px-10 h-10 black border-b '>
         <div className='hidden md:float-right md:contents items-center'>
           <Link href='https://www.bbc.co.uk/sport/football'>
             <span className='md:float-right mt-3 text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
