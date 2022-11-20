@@ -39,21 +39,21 @@ const Header = () => {
 
   return (
     <div>
-      <div className='mx-auto px-10 h-10 bg-black border-b '>
-        <div className='hidden md:float-right md:contents items-center'>
+      <div className='mx-auto px-10 h-8 bg-gradient-to-r to-gray-500 from-black flex items-center justify-end'>
+        <div className='hidden md:contents'>
           <Link href='https://www.bbc.co.uk/sport/football'>
-            <span className='md:float-right mt-3 text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
+            <span className='text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
+              <FaTwitter style={{ fill: "white" }} />
+            </span>
+          </Link>
+          <Link href='https://www.bbc.co.uk/sport/football'>
+            <span className='text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
               <FaYoutube style={{ fill: "white" }} />
             </span>
           </Link>
           <Link href='https://www.bbc.co.uk/sport/football'>
-            <span className='md:float-right mt-3 text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
+            <span className='text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
               <FaInstagram style={{ fill: "white" }} />
-            </span>
-          </Link>
-          <Link href='https://www.bbc.co.uk/sport/football'>
-            <span className='md:float-right mt-3 text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
-              <FaTwitter style={{ fill: "white" }} />
             </span>
           </Link>
         </div>

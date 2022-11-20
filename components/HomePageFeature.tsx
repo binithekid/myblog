@@ -68,7 +68,7 @@ const HomePageFeature = () => {
               cases," she said.
             </p>
             <Link href={`/post/first-post`}>
-              <button className='font-light tracking-wide border text-md rounded ml-5 mt-7 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-white  bg-gradient-to-r from-sky-500 to-blue-600'>
+              <button className='font-light tracking-wide border text-md rounded ml-5 mt-7 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-white  bg-gradient-to-r to-gray-500 from-black'>
                 Read More
               </button>
             </Link>

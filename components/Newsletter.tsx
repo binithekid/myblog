@@ -35,12 +35,12 @@ const Newsletter = () => {
   });
 
   return (
-    <div className='flex flexrow w-full  bg-slate-200'>
+    <div className='flex flexrow w-full  bg-gradient-to-r to-sky-500 from-blue-500'>
       <div className='w-1/2 p-10'>
-        <h1 className='ml-4 text-3xl text-gray font-inter mb-2'>
+        <h1 className='ml-4 text-3xl font-light text-white font-inter mb-2'>
           Subscribe to our newsletter!
         </h1>
-        <p className='ml-4'>
+        <p className='ml-4 text-white font-light'>
           Newsletter Subcribe Lorem ipsum dolor sit amet, consectetur
           adipisicing elit. Perferendis aspernatur ut at quae omnis pariatur
           obcaecati possimus nisi ea iste! Newsletter Subcribe Lorem ipsum dolor
