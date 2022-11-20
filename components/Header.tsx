@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import Sidebar from "./Sidebar";
+import logotruthseekers from "../public/logotruthseekers.png";
 
 const categories = [
   { name: "React", slug: "react" },
@@ -38,7 +39,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className='mx-auto px-10 h-10 bg-black border-b '>
+      <div className='mx-auto px-10 h-10 bg-gradient-to-r from-sky-200 to-blue-600 border-b '>
         <div className='hidden md:float-right md:contents items-center'>
           <Link href='https://www.bbc.co.uk/sport/football'>
             <span className='md:float-right mt-3 text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
@@ -57,7 +58,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className='flex items-center justify-center mx-auto px-10 mb-8 bg-white shadow-sm '>
+      <div className='flex items-center justify-center mx-auto px-10 mb-8 bg-white shadow-md '>
         <div ref={ref}>
           <FiMenu
             onClick={() => setShowSidebar(!showSidebar)}
