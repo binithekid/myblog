@@ -48,10 +48,10 @@ const HomePageFeature = () => {
           <div className='w-1/2'>
             <img src={sunsetboat.src} className='shadow-sm' />
           </div>
-          <div className='w-1/2'>
+          <div className='w-1/2 flex flex-col justify-center'>
             <div className='flex flex-row'>
-              <h5 className='ml-5 mt-10'>Editor's Pick</h5>
-              <AiFillStar className='mt-12 ml-1' size='0.6rem' />
+              <h5 className='ml-5'>Editor's Pick</h5>
+              <AiFillStar className='ml-1 mt-2' size='0.6rem' />
             </div>
             <h1 className='text-3xl text-gray font-inter mt-1 mb-1 ml-5'>
               Do not be foolish
@@ -68,7 +68,7 @@ const HomePageFeature = () => {
               cases," she said.
             </p>
             <Link href={`/post/first-post`}>
-              <button className='font-light tracking-wide border text-md rounded-md ml-5 mt-7 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-white  bg-gradient-to-r to-gray-600 from-black'>
+              <button className='cursor-pointer font-light tracking-wide text-md rounded-md ml-5 mt-7 px-6 py-2 w-32 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:opacity-4 text-white bg-gradient-to-r to-gray-600 from-black'>
                 Read More
               </button>
             </Link>
