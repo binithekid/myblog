@@ -42,7 +42,7 @@ const Home: NextPage = ({ posts }: any) => {
                       <p className='text-ellipsis overflow-hidden pl-3 pb-1 mb-1 text-sm text-zinc-800 line-clamp-3 mr-2'>
                         {gridItem.node.excerpt}
                       </p>
-                      <button className='border border-zinc-700 text-sm rounded ml-3 mt-2 mb-5 px-5 py-1 shadow-sm transition duration-300 transform hover:-translate-y-1 hover:shadow-md inline-block hover:opacity-4 text-black'>
+                      <button className='font-light bg-gradient-to-r to-gray-600 from-black text-sm rounded ml-3 mt-2 mb-5 px-5 py-1 shadow-sm transition duration-300 transform hover:-translate-y-1 hover:shadow-md inline-block hover:opacity-4 text-white'>
                         Read More
                       </button>
                     </div>

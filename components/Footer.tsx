@@ -8,7 +8,7 @@ const Footer = () => {
       <div className='flex justify-center items-center'>
         <Link href='/'>
           <span className='cursor-pointer mt-10 font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
-            TruthSeekers.
+            MyBlog.
           </span>
         </Link>
       </div>
@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='flex justify-center items-center mb-8 font-normal text-sm'>
-        <p>Copyright &copy; 2022 TruthSeekers</p>
+        <p>Copyright &copy; 2022 MyBlog</p>
       </div>
     </div>
   );

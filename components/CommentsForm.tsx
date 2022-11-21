@@ -100,7 +100,7 @@ const CommentsForm = ({ slug }: { slug: string }) => {
         <button
           type='button'
           onClick={handleButtonSubmit}
-          className='border border-zinc-700 text-md rounded mt-3 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-black'>
+          className='font-light bg-gradient-to-r to-gray-600 from-black text-md rounded mt-3 px-6 py-2 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg inline-block hover:opacity-4 text-white'>
           Post Comment
         </button>
         {showSuccessMessage && (

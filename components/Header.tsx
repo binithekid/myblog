@@ -39,7 +39,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className='mx-auto px-10 h-8 bg-gradient-to-r to-gray-500 from-black flex items-center justify-end'>
+      <div className='mx-auto px-10 h-8 bg-gradient-to-r to-gray-600 from-black flex items-center justify-end'>
         <div className='hidden md:contents'>
           <Link href='https://www.bbc.co.uk/sport/football'>
             <span className='text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
@@ -68,7 +68,7 @@ const Header = () => {
         <div className='w-full py-8 flex items-center justify-center'>
           <Link href='/'>
             <span className='cursor-pointer font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
-              TruthSeekers.
+              MyBlog.
             </span>
           </Link>
         </div>

@@ -35,7 +35,7 @@ const Newsletter = () => {
   });
 
   return (
-    <div className='flex flexrow w-full  bg-gradient-to-r to-sky-500 from-blue-500'>
+    <div className='flex flexrow w-full  bg-gradient-to-r to-gray-600 from-black'>
       <div className='w-1/2 p-10'>
         <h1 className='ml-4 text-3xl font-light text-white font-inter mb-2'>
           Subscribe to our newsletter!
