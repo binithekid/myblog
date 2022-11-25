@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import Sidebar from "./Sidebar";
-import logotruthseekers from "../public/logotruthseekers.png";
 
 const categories = [
   { name: "React", slug: "react" },
@@ -39,7 +38,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className='mx-auto px-10 h-8 bg-gradient-to-r to-gray-600 from-black flex items-center justify-end'>
+      <div className='mx-auto px-10 h-8 bg-black flex items-center justify-end'>
         <div className='hidden md:contents'>
           <Link href='https://www.bbc.co.uk/sport/football'>
             <span className='text-gray ml-5 cursor-pointer font-light hover:opacity-70'>
@@ -58,7 +57,7 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <div className='flex items-center justify-center mx-auto px-10 mb-8 bg-white shadow-md '>
+      <div className='flex items-center justify-center h-20 px-10 mb-8 bg-white shadow-sm'>
         <div ref={ref}>
           <FiMenu
             onClick={() => setShowSidebar(!showSidebar)}
@@ -67,8 +66,8 @@ const Header = () => {
         </div>
         <div className='w-full py-8 flex items-center justify-center'>
           <Link href='/'>
-            <span className='cursor-pointer font-bold text-4xl text-gray font-inter hover:opacity-70 transition ease-in-out duration-500'>
-              MyBlog.
+            <span className='cursor-pointer font-bold text-4xl text-gray font-inter transition ease-in-out duration-500 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-amber-200 via-red-400 to-red-500'>
+              TruthSeekers.
             </span>
           </Link>
         </div>

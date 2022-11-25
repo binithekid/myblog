@@ -21,6 +21,7 @@ export const getPosts = async () => {
             slug
             title
             excerpt
+            read
             featuredImage {
               url
             }
@@ -72,6 +73,7 @@ export const getPostDetails = async (slug: string) => {
         }
         createdAt
         slug
+        read
         content {
           raw
         }
@@ -101,6 +103,14 @@ export const getSimilarPosts = async (categories: any, slug: any) => {
         title
         featuredImage {
           url
+        }
+        author {
+          bio
+          name
+          id
+          photo {
+            url
+          }
         }
         createdAt
         slug
@@ -165,6 +175,7 @@ export const getCategoryPost = async (slug: string) => {
             createdAt
             slug
             title
+            read
             excerpt
             featuredImage {
               url
@@ -199,6 +210,7 @@ export const getFeaturedPosts = async () => {
         }
         title
         slug
+        read
         createdAt
       }
     }   
@@ -250,7 +262,14 @@ export const getRecentPosts = async () => {
         }
         createdAt
         slug
+        read
         excerpt
+        author {
+          name
+          photo {
+            url
+          }
+        }
       }
     }
   `;
@@ -270,6 +289,7 @@ export const getMostRecentPost = async () => {
         featuredImage {
           url
         }
+        read
         createdAt
         slug
         excerpt
@@ -291,4 +311,39 @@ export const SubmitEmail = async (obj: any) => {
   });
 
   return result.json();
+};
+
+export const SubmitContact = async (values: any) => {
+  const result = await fetch("/api/contacts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(values),
+  });
+
+  return result.json();
+};
+
+export const getCategoryPosts = async (name: string) => {
+  const query = gql`
+    query GetCategoryPosts($name: String!) {
+      category(where: { name: $name }) {
+        posts {
+          author {
+            name
+          }
+          excerpt
+          featuredImage {
+            url
+          }
+          slug
+          title
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query, { name });
+
+  return result.category;
 };

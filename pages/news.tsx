@@ -8,14 +8,6 @@ const news = ({ posts }: { posts: any }) => {
   return (
     <div className='container mx-auto mb-8'>
       <div className='mt-12 flex flex-row'>
-        <BiNews
-          style={{
-            color: "black",
-            marginTop: "3px",
-            fontSize: "2rem",
-            marginRight: "5px",
-          }}
-        />
         <h1 className='font-bold text-3xl text-gray font-inter mb-5'>News</h1>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>

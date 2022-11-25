@@ -1,11 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { PostCard, Categories, PostWidget, Socials } from "../components";
+import { PostCard, PostWidget, Socials } from "../components";
 import { getCategoryPost, getPosts, getMostRecentPost } from "../services";
 import HomePageFeature from "../components/HomePageFeature";
 import { useEffect, useState } from "react";
 import Newsletter from "../components/Newsletter";
 import Qutote from "../components/Qutote";
+import Opinion from "../components/OpinionWidget";
+import Link from "next/link";
 
 const Home: NextPage = ({ posts }: any) => {
   const [gridItems, setGridItems] = useState([]);
@@ -30,21 +32,26 @@ const Home: NextPage = ({ posts }: any) => {
             <div className='flex flex-row flex-wrap'>
               {gridItems &&
                 gridItems?.map((gridItem: any) => (
-                  <div className='w-1/2' key={gridItem.title}>
+                  <div className='w-1/2' key={gridItem.node.title}>
                     <div className='mb-5 mr-3 shadow-sm rounded-b-sm bg-white'>
                       <img
                         className='p-2 object-top object.cover'
                         src={gridItem.node.featuredImage?.url}
                       />
-                      <h1 className='pl-3 pt-1 text-xl font-semibold'>
-                        {gridItem.node.title}
-                      </h1>
-                      <p className='text-ellipsis overflow-hidden pl-3 pb-1 mb-1 text-sm text-zinc-800 line-clamp-3 mr-2'>
+                      <Link href={`/post/${gridItem.node.slug}`}>
+                        <h1 className='pl-3 text-xl font-semibold cursor-pointer hover:opacity-60 transition ease-in-out duration-300'>
+                          {gridItem.node.title}
+                        </h1>
+                      </Link>
+                      <p className='text-ellipsis overflow-hidden pl-3 text-sm text-zinc-800 line-clamp-3 mr-2'>
                         {gridItem.node.excerpt}
                       </p>
-                      <button className='font-light bg-gradient-to-r to-gray-600 from-black text-sm rounded ml-3 mt-2 mb-5 px-5 py-1 shadow-sm transition duration-300 transform hover:-translate-y-1 hover:shadow-md inline-block hover:opacity-4 text-white'>
+                      <p className='text-xs ml-3 pb-3 pt-2 text-slate-600'>
+                        {gridItem.node.read} MIN READ
+                      </p>
+                      {/* <button className='font-light bg-gradient-to-r from-amber-200 via-red-400 to-red-500 text-sm rounded-sm ml-3 mt-2 mb-5 px-5 py-1 shadow-sm transition duration-300 transform hover:-translate-y-1 hover:shadow-md inline-block hover:opacity-4 text-white'>
                         Read More
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 ))}
@@ -55,7 +62,8 @@ const Home: NextPage = ({ posts }: any) => {
             <div className='relative'>
               <PostWidget />
               <Qutote />
-              <Categories />
+              <Opinion />
+              <Qutote />
               <Socials />
             </div>
           </div>

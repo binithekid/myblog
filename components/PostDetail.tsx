@@ -106,17 +106,20 @@ const PostDetail = ({ post }: any) => {
       ref={ref}
       animate={control}
       className='bg-white shadow-sm rounded-sm pb-12 mb-8'>
-      <div className='relative overflow-hidden shadow-sm mb-6'>
-        <img
-          src={post.featuredImage.url}
-          alt={post.title}
-          className='object-top h-full w-full'
-        />
-      </div>
-      <div className='px-4 lg:px-0'>
+      <div className='px-4 lg:px-0 pt-6'>
+        <p className='px-6 uppercase text-xs'>{post.categories[0].name}</p>
         <h1 className='px-6 text-4xl text-gray font-inter mb-2 tracking-normal'>
           {post.title}
         </h1>
+        <p className='px-6 italic'>{post.excerpt}</p>
+
+        <div className='relative overflow-hidden shadow-sm mt-4 mb-6'>
+          <img
+            src={post.featuredImage.url}
+            alt={post.title}
+            className='object-top h-full w-full'
+          />
+        </div>
         <div className='px-6 flex flex-row '>
           <div>
             <p>{post.author.name}</p>

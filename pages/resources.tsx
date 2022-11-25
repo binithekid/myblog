@@ -8,14 +8,6 @@ const news = ({ posts }: { posts: any }) => {
   return (
     <div className='container mx-auto mb-8'>
       <div className='mt-12 flex flex-row'>
-        <MdOutlineLibraryBooks
-          style={{
-            color: "black",
-            marginTop: "3px",
-            fontSize: "2rem",
-            marginRight: "7px",
-          }}
-        />
         <h1 className='font-bold text-3xl text-gray font-inter mb-5'>
           Resources
         </h1>

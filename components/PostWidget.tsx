@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import moment from "moment";
 import Link from "next/link";
-
 import { getRecentPosts, getSimilarPosts } from "../services";
 
 const PostWidget = ({ categories, slug }: any) => {
@@ -18,33 +16,25 @@ const PostWidget = ({ categories, slug }: any) => {
   }, [slug]);
 
   return (
-    <div className='bg-white shadow-md mb-8 rounded-sm'>
-      <h3 className='text-lg mb-5 font-light border-b p-2 rounded-t-sm text-white bg-gradient-to-r to-gray-600 from-black'>
+    <div className='bg-white mb-8 rounded-sm'>
+      <h3 className='text-sm -mb-1 p-2 rounded-t-sm text-black'>
         {slug ? "Related Posts" : "Most Recent"}
       </h3>
+      <hr className='mb-3 mx-2' />
       {relatedPosts.map((post: any, i) => (
         <div
           key={post.title}
           className={`flex items-center w-full pl-3 ${
-            relatedPosts.length - 1 == i ? "pb-7" : "pb-5"
+            relatedPosts.length - 1 == i ? "pb-5" : "pb-5"
           }`}>
-          <div className='w-16 flex-none'>
-            <img
-              alt={post.title}
-              height='80px'
-              width='80px'
-              className='rounded-sm'
-              src={post.featuredImage.url}
-            />
-          </div>
-          <div className='flex-grow ml-4'>
+          <div className='flex-grow'>
             <Link href={`/post/${post.slug}`} key={post.title}>
-              <p className='text-lg -mb-1 cursor-pointer hover:opacity-70'>
+              <p className='text-lg cursor-pointer hover:opacity-70'>
                 {post.title}
               </p>
             </Link>
-            <p className='text-gray-500 font-light text-sm'>
-              {moment(post.createdAt).format("MMM DD, YYYY")}
+            <p className='text-xs uppercase text-slate-600'>
+              {post.author.name} | {post.read} MIN READ
             </p>
           </div>
         </div>
