@@ -5,13 +5,10 @@ import { useInView } from "react-intersection-observer";
 import {
   EmailShareButton,
   FacebookShareButton,
-  WhatsappShareButton,
   TwitterShareButton,
   TwitterIcon,
   FacebookIcon,
   EmailIcon,
-  RedditIcon,
-  WhatsappIcon,
 } from "react-share";
 
 const PostDetail = ({ post }: any) => {
@@ -106,30 +103,16 @@ const PostDetail = ({ post }: any) => {
       ref={ref}
       animate={control}
       className='bg-white shadow-sm rounded-sm pb-12 mb-8'>
-      <div className='px-4 lg:px-0 pt-6'>
-        <p className='px-6 uppercase text-xs'>{post.categories[0].name}</p>
+      <div className='px-4 lg:px-0 pt-5'>
+        <p className='px-6 uppercase text-xs mb-2'>{post.categories[0].name}</p>
         <h1 className='px-6 text-4xl text-gray font-inter mb-2 tracking-normal'>
           {post.title}
         </h1>
         <p className='px-6 italic'>{post.excerpt}</p>
-
-        <div className='relative overflow-hidden shadow-sm mt-4 mb-6'>
-          <img
-            src={post.featuredImage.url}
-            alt={post.title}
-            className='object-top h-full w-full'
-          />
-        </div>
-        <div className='px-6 flex flex-row '>
-          <div>
-            <p>{post.author.name}</p>
-          </div>
-          <div className='px-3 font-light'>
-            <p>|</p>
-          </div>
+        <div className='px-6 pt-3 flex flex-row '>
           <div className='font-medium mb-1'>
-            <span className='mb-10'>
-              {moment(post.createdAt).format("MMM DD, YYYY")}
+            <span className='text-sm mb-10'>
+              Published: {moment(post.createdAt).format("MMM DD YYYY")}
             </span>{" "}
           </div>
           <div className='px-3'>
@@ -164,7 +147,17 @@ const PostDetail = ({ post }: any) => {
             </EmailShareButton>
           </div>
         </div>
-        <div className='mt-1 px-6 mb-3'>
+        <div className='relative overflow-hidden shadow-sm mt-3 mb-1'>
+          <img
+            src={post.featuredImage.url}
+            alt={post.title}
+            className='object-top h-full w-full'
+          />
+        </div>
+        <p className='px-6 text-xs text-zinc-800 mb-1'>
+          Image caption for the image above goes here{" "}
+        </p>
+        <div className='px-6 mb-3'>
           <hr style={{ backgroundColor: "black" }} />
         </div>
 

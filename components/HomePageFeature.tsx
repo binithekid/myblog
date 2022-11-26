@@ -48,12 +48,12 @@ const HomePageFeature = () => {
           </div>
           <div className='w-1/2 flex flex-col justify-center'>
             <div className='flex flex-row'>
-              <h5 className='ml-4 text-red-500 uppercase text-sm'>
+              <h5 className='ml-4 text-red-500 uppercase text-xs'>
                 Editor's Pick
               </h5>
               <AiFillStar
                 style={{ fill: "rgb(239 68 68)" }}
-                className='ml-1 mt-1.5'
+                className='ml-1 mt-1'
                 size='0.5rem'
               />
             </div>

@@ -28,11 +28,11 @@ const PostDetails = ({ post }: any) => {
         </div>
         <div className='col-span-1 lg:col-span-4'>
           <div className='relative'>
+            <Qutote />
             <PostWidget
               slug={post.slug}
               categories={post.categories.map((category: any) => category.slug)}
             />
-            <Qutote />
             <Socials />
           </div>
         </div>
