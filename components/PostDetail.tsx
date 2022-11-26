@@ -108,7 +108,7 @@ const PostDetail = ({ post }: any) => {
         <h1 className='px-6 text-4xl text-gray font-inter mb-2 tracking-normal'>
           {post.title}
         </h1>
-        <p className='px-6 italic'>{post.excerpt}</p>
+        <p className='px-6'>{post.excerpt}</p>
         <div className='px-6 pt-3 flex flex-row '>
           <div className='font-medium mb-1'>
             <span className='text-sm mb-10'>
