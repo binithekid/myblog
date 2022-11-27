@@ -45,7 +45,7 @@ const resources = ({ posts }: { posts: any }) => {
           <p className='text-sm pl-4 mb-1 text-slate-600 uppercase'>
             The best resources from across the globe recommended by us
           </p>
-          <hr className='mb-6 mx-4 w-14 border-none h-1 bg-slate-600' />
+          <hr className='mb-6 mx-4 w-1/6 mt-3' />
           <div>
             {posts.map((post: any, i: number) => (
               <div className='px-4'>
