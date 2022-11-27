@@ -1,23 +1,60 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Qutote from "../components/Qutote";
 import { getPosts } from "../services";
 import WideCard from "../components/WideCard";
-import { BiNews } from "react-icons/bi";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const news = ({ posts }: { posts: any }) => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    }
+  }, [control, inView]);
+
+  const boxVariant = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeIn",
+        type: "spring",
+        stiffness: 50,
+        delay: 0.2,
+      },
+    },
+    hidden: { y: 20, opacity: 0 },
+  };
+
   return (
     <div className='container mx-auto mb-8'>
-      <div className='mt-12 flex flex-row'>
-        <h1 className='font-bold text-3xl text-gray font-inter mb-5'>News</h1>
-      </div>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-        <div className='lg:col-span-8 col-span-1'>
+        <motion.div
+          variants={boxVariant}
+          initial='hidden'
+          ref={ref}
+          animate={control}
+          className='lg:col-span-8 col-span-1 bg-white shadow-sm'>
+          <h1 className='pl-4 pt-4 font-bold text-3xl text-gray font-inter'>
+            News
+          </h1>
+          <p className='text-sm pl-4 mb-1 text-slate-600 uppercase'>
+            The latest news coming in from all over the world
+          </p>
+          <hr className='mb-6 mx-4 w-14 border-none h-1 bg-slate-600' />
           <div>
-            {posts.map((post: any) => (
-              <WideCard post={post} />
+            {posts.map((post: any, i: number) => (
+              <div className='px-4'>
+                <WideCard post={post} />
+                {posts.length - 1 === i ? null : <hr />}
+              </div>
             ))}
           </div>
-        </div>
+        </motion.div>
         <div className='lg:col-span-4 col-span-1'>
           <div className='relative'>
             <Qutote />
