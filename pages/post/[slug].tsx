@@ -10,6 +10,7 @@ import {
   Socials,
 } from "../../components";
 import Qutote from "../../components/Qutote";
+import Newsletter from "../../components/Newsletter";
 
 const PostDetails = ({ post }: any) => {
   const router = useRouter();
@@ -33,6 +34,7 @@ const PostDetails = ({ post }: any) => {
               slug={post.slug}
               categories={post.categories.map((category: any) => category.slug)}
             />
+            <Newsletter />
             <Socials />
           </div>
         </div>

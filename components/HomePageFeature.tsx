@@ -1,6 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { getMostRecentPost } from "../services";
+import React from "react";
 import { motion } from "framer-motion";
 import sunsetboat from "../public/sunsetboat.jpeg";
 import { AiFillStar } from "react-icons/ai";
@@ -36,9 +35,9 @@ const HomePageFeature = () => {
         variants={boxVariant}
         initial='hidden'
         animate='visible'
-        className='flex flex-nowrap overflow-hidden'>
-        <div className='flex flex-row w-full mb-8 gap-2 bg-white shadow-sm transition-transform'>
-          <div className='w-1/2'>
+        className='flex flex-nowrap overflow-hidden px-4 lg:p-0 mt-4 lg:mt-0'>
+        <div className='flex flex-col lg:flex-row w-full mb-8 gap-2 bg-white shadow-sm lg:shadow-sm transition-transform'>
+          <div className='lg:w-1/2'>
             <Link href={`/post/first-post`}>
               <img
                 src={sunsetboat.src}
@@ -46,8 +45,8 @@ const HomePageFeature = () => {
               />
             </Link>
           </div>
-          <div className='w-1/2 flex flex-col justify-center'>
-            <div className='flex flex-row'>
+          <div className='lg:w-1/2 flex flex-col justify-center mt-3 lg:mt-0'>
+            <div className='flex flex-row '>
               <h5 className='ml-4 text-red-500 uppercase text-xs'>
                 Editor's Pick
               </h5>
@@ -63,7 +62,7 @@ const HomePageFeature = () => {
               </h1>
             </Link>
             <h4 className='ml-4 text-sm text-slate-600'>NOV 27, 2022 </h4>
-            <p className='ml-4 text-md text-zinc-800 mr-10 leading-7'>
+            <p className='ml-4 text-md text-zinc-800 mr-10 leading-normal lg:leading-7 mt-1 lg:mt-0'>
               Ms Veasey, who represented herself, said video evidence showed 27
               people in her home but maintained it was not a party. She admitted
               she was in the wrong for inviting people from outside her
@@ -73,14 +72,9 @@ const HomePageFeature = () => {
               trying to pull money out of people, pushing people through court
               cases," she said.
             </p>
-            <h4 className='ml-4 text-sm text-slate-600 mt-1 mb-1'>
+            <h4 className='ml-4 text-sm text-slate-600 mt-1 mb-5 lg:mb-1'>
               4 MIN READ
             </h4>
-            {/* <Link href={`/post/first-post`}>
-              <button className='cursor-pointer shadow-lg text-md font-light rounded-sm ml-5 mt-6 px-6 py-2 w-32 transition duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:opacity-4 text-white bg-gradient-to-r from-amber-200 via-red-400 to-red-500'>
-                Read More
-              </button>
-            </Link> */}
           </div>
         </div>
       </motion.div>

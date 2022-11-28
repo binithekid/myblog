@@ -18,7 +18,7 @@ const Sidebar = ({
   return (
     <>
       <div
-        className={`top-0 left-0 w-[20vw] bg-white shadow-xl text-white fixed h-full z-10
+        className={`top-0 left-0 w-[60vw] lg:w-[20vw] bg-white shadow-xl text-white fixed h-full z-10
             ${
               showSidebar ? "-translate-x-0" : "-translate-x-full"
             } ease-in-out duration-500`}>

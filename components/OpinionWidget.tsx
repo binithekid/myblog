@@ -10,7 +10,7 @@ const Opinion = () => {
   }, []);
 
   return (
-    <div className='bg-white mb-8 rounded-sm'>
+    <div className='bg-white mb-8 rounded-sm hidden lg:block'>
       <h3 className='text-sm -mb-1 p-2 rounded-t-sm text-black'>Opinion</h3>
       <hr className='mb-3 mx-2' />
       {opinions.length > 0 &&

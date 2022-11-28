@@ -20,6 +20,9 @@ interface Posts {
   };
   read: string;
   createdAt: string;
+  categories: {
+    name: string;
+  }[];
 }
 
 const PostCard = ({ post }: { post: Posts }) => {
@@ -53,7 +56,7 @@ const PostCard = ({ post }: { post: Posts }) => {
       initial='hidden'
       ref={ref}
       animate={control}
-      className='bg-white shadow-sm p-0 lg:pb-3 mb-8 rounded-b-sm'>
+      className='bg-white shadow-sm pb-3 lg:pb-3 mb-8 rounded-b-sm lg:mx-0 mx-4'>
       <div className='shadow-md mb-3'>
         <img
           src={post.featuredImage.url}
@@ -62,19 +65,19 @@ const PostCard = ({ post }: { post: Posts }) => {
         />
       </div>
       <div className='ml-3'>
-        <span className='text-sm uppercase text-slate-600'>
-          {moment(post.createdAt).format("MMM DD, YYYY")}
+        <span className='text-xs uppercase mb-1 text-slate-600'>
+          {post.categories[0].name}
         </span>
       </div>
-      <h1 className='transition ease-in-out duration-500 text-left text-gray cursor-pointer hover:opacity-60 text-3xl font-inter ml-3'>
+      <h1 className='transition ease-in-out duration-500 text-left text-gray cursor-pointer hover:opacity-60 lg:text-3xl text-xl font-inter ml-3'>
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className='block lg:flex w-full'></div>
-      <p className='text-zinc-800 leading-7  ml-3 mr-2 text-ellipsis overflow-hidden line-clamp-3'>
+      <p className='text-zinc-800 leading-normal text-sm lg:leading-7 ml-3 mr-2 text-ellipsis overflow-hidden line-clamp-3'>
         {post.excerpt}
       </p>
       <div className='-mb-0'>
-        <span className='text-sm ml-3 text-slate-600'>
+        <span className='text-xs ml-3 text-slate-600'>
           {post.read} MIN READ
         </span>
       </div>

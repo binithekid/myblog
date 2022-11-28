@@ -49,7 +49,7 @@ const opinion = ({ posts }: { posts: any }) => {
           <div>
             {posts.map((post: any, i: number) => (
               <div className='px-4'>
-                <WideCard post={post} />
+                <WideCard post={post} key={i} />
                 {posts.length - 1 === i ? null : <hr />}
               </div>
             ))}

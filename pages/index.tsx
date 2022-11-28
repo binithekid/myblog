@@ -27,17 +27,25 @@ const Home: NextPage = ({ posts }: any) => {
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className='lg:col-span-8 col-span-1'>
             {posts.map((post: any) => (
-              <PostCard post={post.node} key={post.title} />
+              <PostCard post={post.node} key={post.node.title} />
             ))}
             <div className='flex flex-row flex-wrap'>
               {gridItems &&
-                gridItems?.map((gridItem: any) => (
-                  <div className='w-1/2' key={gridItem.node.title}>
-                    <div className='mb-5 mr-3 shadow-sm rounded-b-sm bg-white'>
+                gridItems?.map((gridItem: any, i: number) => (
+                  <div className='lg:w-1/2' key={gridItem.node.title}>
+                    <div
+                      className={`lg:mx-0 mx-4 lg:mb-5 lg:mr-3 shadow-sm lg:mt-0 rounded-b-sm bg-white ${
+                        gridItems.length - 1 === i ? "mb-0" : "mb-10"
+                      }`}>
                       <img
-                        className='p-2 object-top object.cover'
+                        className='lg:p-2 mb-3 lg:mb-0 object-top object.cover'
                         src={gridItem.node.featuredImage?.url}
                       />
+                      <div className='ml-3'>
+                        <span className='text-xs uppercase mb-1 text-slate-600 lg:hidden'>
+                          {gridItem.node.categories[0].name}
+                        </span>
+                      </div>
                       <Link href={`/post/${gridItem.node.slug}`}>
                         <h1 className='pl-3 text-xl font-semibold cursor-pointer hover:opacity-60 transition ease-in-out duration-300'>
                           {gridItem.node.title}
@@ -63,13 +71,12 @@ const Home: NextPage = ({ posts }: any) => {
               <PostWidget />
               <Qutote />
               <Opinion />
-              <Qutote />
               <Socials />
+              <Newsletter />
             </div>
           </div>
         </div>
       </div>
-      <Newsletter />
     </div>
   );
 };

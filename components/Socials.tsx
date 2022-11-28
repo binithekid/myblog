@@ -3,7 +3,7 @@ import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 
 const Socials = () => {
   return (
-    <div className='bg-white shadow-sm mb-8 rounded-sm'>
+    <div className='bg-white shadow-sm mb-8 rounded-sm hidden lg:block'>
       <h3 className='text-sm -mb-1 p-2 rounded-t-sm text-black'> Socials</h3>
       <hr className='mb-3 mx-2' />
       <div className='flex flex-col pl-4'>

@@ -149,7 +149,6 @@ const contact = () => {
           )}
         </div>
       </div>
-      <Newsletter />
     </>
   );
 };

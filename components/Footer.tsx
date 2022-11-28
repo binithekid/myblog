@@ -13,14 +13,14 @@ const Footer = () => {
   ];
 
   return (
-    <div className='flex w-full flex-col bg-black mx-auto px-10'>
+    <div className='flex w-full flex-col bg-black mx-auto px-4 lg:px-10'>
       <div className='flex flex-start pl-4 flex-col'>
         <Link href='/'>
           <h1 className='cursor-pointer mt-10 font-bold text-3xl text-white font-inter transition ease-in-out duration-500 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-amber-200 via-red-400 to-red-500'>
             TruthSeekers.
           </h1>
         </Link>
-        <p className='text-white text-sm font-light w-2/3 mt-2'>
+        <p className='text-white text-xs lg:text-sm font-light lg:w-1/2 mt-2'>
           WIRED is where tomorrow is realised. It is the essential source of
           information and ideas that make sense of a world in constant
           transformation. The WIRED conversation illuminates how technology is
@@ -50,8 +50,8 @@ const Footer = () => {
       </div>
       <div className='flex flex-col mb-8 font-normal text-sm text-white border-t mt-5 border-gray-600'>
         <div className='flex flex-row mt-3 pl-4'>
-          {categories.map((category, i) => (
-            <Link href={`/${category.slug}`}>
+          {categories.map((category) => (
+            <Link href={`/${category.slug}`} key={category.slug}>
               <p className='text-gray-400 text-xs mr-5 cursor-pointer hover:text-white'>
                 {category.name}{" "}
               </p>

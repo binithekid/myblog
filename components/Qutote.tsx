@@ -3,7 +3,7 @@ import quotewebsiite from "../public/quotewebsiite.png";
 
 const Qutote = () => {
   return (
-    <div className='shadow-md rounded-sm p-1 mb-8 w-full'>
+    <div className='shadow-md rounded-sm lg:p-1 mb-8 lg:mx-0 mx-4'>
       <img src={quotewebsiite.src} />
     </div>
   );
