@@ -107,7 +107,7 @@ const PostDetail = ({ post }: any) => {
       className='bg-white shadow-sm rounded-sm pb-12 mb-8 mt-8 lg:mt-0'>
       <div className='px-0 lg:px-0 pt-5'>
         <p className='px-6 uppercase text-xs mb-1'>{post.categories[0].name}</p>
-        <h1 className='px-6 text-2xl lg:text-3xl text-gray font-semibold mb-2 tracking-normal'>
+        <h1 className='px-6 text-2xl lg:text-3xl text-gray font-semibold mb-2 tracking-normal font-inter'>
           {post.title}
         </h1>
         <p className='px-6 text-zinc-800'>{post.excerpt}</p>

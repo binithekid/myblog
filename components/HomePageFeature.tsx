@@ -57,7 +57,7 @@ const HomePageFeature = () => {
               />
             </div>
             <Link href={`/post/first-post`}>
-              <h1 className='text-3xl text-gray font-semibold ml-4 cursor-pointer hover:opacity-60 transition ease-in-out duration-300'>
+              <h1 className='lg:text-3xl text-2xl text-gray font-semibold font-inter ml-4 cursor-pointer hover:opacity-60 transition ease-in-out duration-300'>
                 Do not be foolish
               </h1>
             </Link>
