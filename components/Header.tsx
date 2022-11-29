@@ -38,7 +38,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className='mx-auto px-10 md:h-8 bg-black flex items-center justify-end h-12'>
+      <div className='mx-auto px-4 lg:px-10 md:h-8 bg-black flex items-center justify-end h-12'>
         <div className='flex flex-row md:contents '>
           <Link href='https://www.bbc.co.uk/sport/football'>
             <span className='text-gray ml-4 cursor-pointer font-light hover:opacity-70'>
@@ -66,20 +66,11 @@ const Header = () => {
         </div>
         <div className='w-full py-8 flex items-center justify-center'>
           <Link href='/'>
-            <span className='cursor-pointer font-bold text-3xl md:text-4xl text-gray font-inter transition ease-in-out duration-500 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-amber-200 via-red-400 to-red-500'>
+            <span className='cursor-pointer -ml-1 font-bold text-3xl md:text-4xl text-gray font-inter transition ease-in-out duration-500 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-amber-200 via-red-400 to-red-500'>
               TruthSeekers.
             </span>
           </Link>
         </div>
-        {/* <div className='mb-8'>
-          {categories.map((category) => (
-            <Link key={category.slug} href={`/category/${category.slug}`}>
-              <span className='md:float-right align-middle text-gray ml-8 cursor-pointer font-medium hover:opacity-70'>
-                {category.name}
-              </span>
-            </Link>
-          ))}
-        </div> */}
       </div>
       <div ref={ref}>
         <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />

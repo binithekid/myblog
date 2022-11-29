@@ -22,7 +22,7 @@ const Opinion = () => {
             }`}>
             <div className='flex-grow'>
               <Link href={`/post/${post.slug}`} key={post.title}>
-                <p className='text-lg cursor-pointer hover:opacity-70'>
+                <p className='text-md cursor-pointer hover:opacity-70'>
                   {post.title}
                 </p>
               </Link>

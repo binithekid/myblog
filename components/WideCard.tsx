@@ -4,8 +4,8 @@ import moment from "moment";
 
 const WideCard = ({ post }: { post: any }) => {
   return (
-    <div className='flex flex-row w-full items-center justify-center mb-5 mt-5 bg-white'>
-      <div className='w-1/3'>
+    <div className='flex flex-col lg:flex-row  w-full items-center justify-center mb-5 mt-5 bg-white'>
+      <div className='w-full lg:w-1/3'>
         <Link href={`/post/${post.node.slug}`}>
           <img
             src={post.node.featuredImage.url}
@@ -13,7 +13,7 @@ const WideCard = ({ post }: { post: any }) => {
           />
         </Link>
       </div>
-      <div className='w-2/3 ml-4 '>
+      <div className='w-full lg:w-2/3 ml-4 mt-2'>
         <Link href={`/post/${post.node.slug}`}>
           <h1 className='text-gray cursor-pointer pr-4 font-semibold text-xl -mb-1 transition ease-in-out duration-300 hover:opacity-60'>
             {post.node.title}

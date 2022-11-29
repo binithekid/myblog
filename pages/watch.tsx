@@ -31,7 +31,7 @@ const watch = ({ posts }: { posts: any }) => {
   };
 
   return (
-    <div className='container mx-auto mb-8'>
+    <div className='container mx-auto mb-8 lg:mt-0 mt-4 px-4 lg:px-0'>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
         <motion.div
           variants={boxVariant}
@@ -39,13 +39,13 @@ const watch = ({ posts }: { posts: any }) => {
           ref={ref}
           animate={control}
           className='lg:col-span-8 col-span-1 bg-white shadow-sm'>
-          <h1 className='pl-4 pt-4 font-bold text-3xl text-gray font-inter'>
+          <h1 className='pl-4 pt-4 font-bold text-2xl lg:text-3xl text-gray font-inter'>
             Watch
           </h1>
-          <p className='text-sm pl-4 mb-1 text-slate-600 uppercase'>
-            The latest videos from out YouTube channel
+          <p className='text-sm pl-4 mb-1 text-slate-600'>
+            The latest videos from our YouTube channel
           </p>
-          <hr className='mb-6 mx-4 w-1/6 mt-3' />
+          <hr className='mb-6 mx-4 w-1/6 mt-1' />
           <div>
             {posts.map((post: any, i: number) => (
               <div className='px-4'>

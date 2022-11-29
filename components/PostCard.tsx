@@ -69,11 +69,11 @@ const PostCard = ({ post }: { post: Posts }) => {
           {post.categories[0].name}
         </span>
       </div>
-      <h1 className='transition ease-in-out duration-500 text-left text-gray cursor-pointer hover:opacity-60 lg:text-3xl text-xl font-inter ml-3'>
+      <h1 className='transition ease-in-out duration-500 text-left text-gray cursor-pointer hover:opacity-60 lg:text-2xl text-xl font-semibold ml-3'>
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className='block lg:flex w-full'></div>
-      <p className='text-zinc-800 leading-normal text-sm lg:leading-7 ml-3 mr-2 text-ellipsis overflow-hidden line-clamp-3'>
+      <p className='text-zinc-800 leading-normal text-sm  ml-3 mr-2 text-ellipsis overflow-hidden line-clamp-3'>
         {post.excerpt}
       </p>
       <div className='-mb-0'>
