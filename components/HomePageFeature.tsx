@@ -72,7 +72,7 @@ const HomePageFeature = () => {
               trying to pull money out of people, pushing people through court
               cases," she said.
             </p>
-            <h4 className='ml-4 text-sm text-slate-600 mt-2 mb-5 lg:mb-1'>
+            <h4 className='ml-4 text-xs text-slate-600 mt-2 mb-5 lg:mb-1'>
               4 MIN READ
             </h4>
           </div>

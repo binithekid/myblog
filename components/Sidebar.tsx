@@ -29,7 +29,9 @@ const Sidebar = ({
         </button>
         <div className='mb-8 flex flex-col mt-20'>
           <Link href={"/"}>
-            <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
+            <div
+              className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'
+              onClick={() => setShowSidebar(!showSidebar)}>
               <div className='flex flex-row'>
                 <TiHomeOutline
                   style={{
@@ -38,9 +40,7 @@ const Sidebar = ({
                     fontSize: "1.3rem",
                   }}
                 />
-                <span
-                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
-                  onClick={() => setShowSidebar(false)}>
+                <span className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'>
                   Home
                 </span>
 
@@ -57,7 +57,9 @@ const Sidebar = ({
             </div>
           </Link>
           <Link href={"/news"}>
-            <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
+            <div
+              className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'
+              onClick={() => setShowSidebar(!showSidebar)}>
               <div className='flex flex-row'>
                 <BiNews
                   style={{
@@ -66,9 +68,7 @@ const Sidebar = ({
                     fontSize: "1.3rem",
                   }}
                 />
-                <span
-                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
-                  onClick={() => setShowSidebar(false)}>
+                <span className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'>
                   News
                 </span>
                 <IoChevronForward
@@ -84,7 +84,9 @@ const Sidebar = ({
             </div>
           </Link>
           <Link href={"/opinion"}>
-            <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
+            <div
+              className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'
+              onClick={() => setShowSidebar(!showSidebar)}>
               <div className='flex flex-row'>
                 <HiOutlineChat
                   style={{
@@ -93,9 +95,7 @@ const Sidebar = ({
                     fontSize: "1.4rem",
                   }}
                 />
-                <span
-                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-2'
-                  onClick={() => setShowSidebar(false)}>
+                <span className='align-middle cursor-pointer text-lg text-zinc-800 ml-2'>
                   Opinion
                 </span>
                 <IoChevronForward
@@ -111,7 +111,9 @@ const Sidebar = ({
             </div>
           </Link>
           <Link href={"/watch"}>
-            <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
+            <div
+              className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'
+              onClick={() => setShowSidebar(!showSidebar)}>
               <div className='flex flex-row'>
                 <MdOndemandVideo
                   style={{
@@ -120,9 +122,7 @@ const Sidebar = ({
                     fontSize: "1.3rem",
                   }}
                 />
-                <span
-                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
-                  onClick={() => setShowSidebar(false)}>
+                <span className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'>
                   Watch
                 </span>
                 <IoChevronForward
@@ -138,7 +138,9 @@ const Sidebar = ({
             </div>
           </Link>
           <Link href={"/resources"}>
-            <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
+            <div
+              className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'
+              onClick={() => setShowSidebar(!showSidebar)}>
               <div className='flex flex-row'>
                 <MdOutlineLibraryBooks
                   style={{
@@ -147,9 +149,7 @@ const Sidebar = ({
                     fontSize: "1.3rem",
                   }}
                 />
-                <span
-                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
-                  onClick={() => setShowSidebar(false)}>
+                <span className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'>
                   Resources
                 </span>
                 <IoChevronForward
@@ -166,7 +166,9 @@ const Sidebar = ({
           </Link>
 
           <Link href={"/contact"}>
-            <div className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'>
+            <div
+              className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'
+              onClick={() => setShowSidebar(!showSidebar)}>
               <div className='flex flex-row'>
                 <FiMail
                   style={{
@@ -175,9 +177,7 @@ const Sidebar = ({
                     fontSize: "1.1rem",
                   }}
                 />
-                <span
-                  className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'
-                  onClick={() => setShowSidebar(false)}>
+                <span className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'>
                   Contact
                 </span>
                 <IoChevronForward
