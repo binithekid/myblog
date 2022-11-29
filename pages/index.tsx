@@ -54,7 +54,7 @@ const Home: NextPage = ({ posts }: any) => {
                       <p className='text-ellipsis overflow-hidden pl-3 text-sm text-zinc-800 line-clamp-3 mr-2'>
                         {gridItem.node.excerpt}
                       </p>
-                      <p className='text-xs ml-3 pb-3 pt-2 text-slate-600'>
+                      <p className='text-xs ml-3 pb-3 pt-4 text-slate-600'>
                         {gridItem.node.read} MIN READ
                       </p>
                       {/* <button className='font-light bg-gradient-to-r from-amber-200 via-red-400 to-red-500 text-sm rounded-sm ml-3 mt-2 mb-5 px-5 py-1 shadow-sm transition duration-300 transform hover:-translate-y-1 hover:shadow-md inline-block hover:opacity-4 text-white'>

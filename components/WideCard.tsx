@@ -15,14 +15,11 @@ const WideCard = ({ post }: { post: any }) => {
       </div>
       <div className='w-full lg:w-2/3 ml-4 mt-2'>
         <Link href={`/post/${post.node.slug}`}>
-          <h1 className='text-gray cursor-pointer pr-4 font-semibold text-xl -mb-1 transition ease-in-out duration-300 hover:opacity-60'>
+          <h1 className='text-gray cursor-pointer pr-4 font-semibold text-xl transition ease-in-out duration-300 hover:opacity-60'>
             {post.node.title}
           </h1>
         </Link>
-        <span className='text-xs uppercase text-slate-600'>
-          {moment(post.createdAt).format("MMM DD, YYYY")}
-        </span>
-        <p className='text-ellipsis overflow-hidden line-clamp-3 mr-3 -mb-1 -mt-1'>
+        <p className='text-ellipsis overflow-hidden line-clamp-3 mr-3 mb-2'>
           {post.node.excerpt}
         </p>
         <span className='text-xs text-slate-600'>

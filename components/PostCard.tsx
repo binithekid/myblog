@@ -76,7 +76,7 @@ const PostCard = ({ post }: { post: Posts }) => {
       <p className='text-zinc-800 leading-normal text-sm  ml-3 mr-2 text-ellipsis overflow-hidden line-clamp-3'>
         {post.excerpt}
       </p>
-      <div className='-mb-0'>
+      <div className='-mb-0 mt-2'>
         <span className='text-xs ml-3 text-slate-600'>
           {post.read} MIN READ
         </span>
