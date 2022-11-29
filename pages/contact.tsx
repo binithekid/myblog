@@ -149,7 +149,7 @@ const contact = () => {
                 ) : null}
                 <button
                   type='submit'
-                  className='cursor-pointer font-light tracking-wide text-xs lg:text-sm rounded-md mt-5 px-6 py-2 w-24 lg:w-28 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:opacity-4 text-white bg-gradient-to-r to-gray-600 from-black'>
+                  className='cursor-pointer font-medium lg:font-light tracking-wide text-xs lg:text-sm rounded-md mt-5 px-6 py-2 w-24 lg:w-28 shadow-md transition duration-300 transform hover:-translate-y-1 hover:shadow-lg hover:opacity-4 text-white bg-gradient-to-r to-gray-600 from-black'>
                   Submit
                 </button>
               </form>
