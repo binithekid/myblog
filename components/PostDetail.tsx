@@ -68,6 +68,15 @@ const PostDetail = ({ post }: any) => {
             />
           </div>
         );
+      case "link":
+        return (
+          <a
+            key={index}
+            href={obj.href}
+            className='text-md text-blue-600 hover:text-blue-400'>
+            <React.Fragment>{obj.title}</React.Fragment>
+          </a>
+        );
       default:
         return modifiedText;
     }
