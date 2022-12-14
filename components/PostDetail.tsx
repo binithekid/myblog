@@ -58,14 +58,15 @@ const PostDetail = ({ post }: any) => {
         );
       case "image":
         return (
-          <img
-            className='px-6 py-6'
-            key={index}
-            alt={obj.title}
-            height={obj.height}
-            width={"100%"}
-            src={obj.src}
-          />
+          <div className='flex justify-center align-center border-slate-500'>
+            <img
+              className='py-2 border-solid border mb-4 border-slate-100'
+              key={index}
+              alt={obj.title}
+              height={obj.height}
+              src={obj.src}
+            />
+          </div>
         );
       default:
         return modifiedText;
@@ -149,18 +150,12 @@ const PostDetail = ({ post }: any) => {
             </EmailShareButton>
           </div>
         </div>
-        <div className='relative overflow-hidden shadow-sm mt-3 mb-1'>
+        <div className='relative overflow-hidden shadow-sm mt-3 mb-6'>
           <img
             src={post.featuredImage.url}
             alt={post.title}
             className='object-top h-full w-full'
           />
-        </div>
-        <p className='px-6 text-xs text-zinc-800 mb-1 ml-1'>
-          Image caption for the image above goes here{" "}
-        </p>
-        <div className='px-6 mb-3'>
-          <hr style={{ backgroundColor: "black" }} />
         </div>
 
         {post.content.raw.children.map((typeObj: any, index: any) => {

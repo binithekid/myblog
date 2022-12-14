@@ -27,7 +27,7 @@ const Opinion = () => {
                 </p>
               </Link>
               <p className='text-xs uppercase text-slate-600'>
-                {post.author.name} | {post.read} MIN READ
+                {post.read} MIN READ
               </p>
             </div>
           </div>

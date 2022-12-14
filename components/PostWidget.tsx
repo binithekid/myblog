@@ -34,7 +34,7 @@ const PostWidget = ({ categories, slug }: any) => {
               </p>
             </Link>
             <p className='text-xs uppercase text-slate-600'>
-              {post.author.name} | {post.read} MIN READ
+              {post.read} MIN READ
             </p>
           </div>
         </div>
