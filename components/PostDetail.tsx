@@ -70,7 +70,7 @@ const PostDetail = ({ post }: any) => {
         return (
           <div className='flex justify-center align-center border-slate-500'>
             <img
-              className='py-2 border-solid border mb-4 border-slate-100'
+              className='border-solid border mb-6 mt-4 border-slate-100'
               key={index}
               alt={obj.title}
               height={obj.height}
