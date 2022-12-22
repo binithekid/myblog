@@ -1,41 +1,12 @@
 import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion";
 import sunsetboat from "../public/sunsetboat.jpeg";
 import { AiFillStar } from "react-icons/ai";
 
-type RecentPost = {
-  slug: any;
-  featuredImage: {
-    url: string;
-  };
-  title: string;
-  excerpt: string;
-  createdAt: string;
-};
-
 const HomePageFeature = () => {
-  const boxVariant = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeIn",
-        type: "spring",
-        stiffness: 50,
-      },
-    },
-    hidden: { y: 20, opacity: 0 },
-  };
-
   return (
     <>
-      <motion.div
-        variants={boxVariant}
-        initial='hidden'
-        animate='visible'
-        className='flex flex-nowrap overflow-hidden px-4 lg:p-0 mt-4 lg:mt-0'>
+      <div className='flex flex-nowrap overflow-hidden px-4 lg:p-0 mt-4 lg:mt-0'>
         <div className='flex flex-col lg:flex-row w-full mb-8 gap-2 bg-white shadow-sm lg:shadow-sm transition-transform'>
           <div className='lg:w-1/2'>
             <Link href={`/post/first-post`}>
@@ -77,7 +48,7 @@ const HomePageFeature = () => {
             </h4>
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

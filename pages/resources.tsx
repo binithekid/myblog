@@ -1,44 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Qutote from "../components/Qutote";
 import { getPosts } from "../services";
 import WideCard from "../components/WideCard";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const resources = ({ posts }: { posts: any }) => {
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    }
-  }, [control, inView]);
-
-  const boxVariant = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeIn",
-        type: "spring",
-        stiffness: 50,
-        delay: 0.2,
-      },
-    },
-    hidden: { y: 20, opacity: 0 },
-  };
-
   return (
     <div className='container mx-auto mb-8 lg:mt-0 mt-4 px-4 lg:px-0'>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-        <motion.div
-          variants={boxVariant}
-          initial='hidden'
-          ref={ref}
-          animate={control}
-          className='lg:col-span-8 col-span-1 bg-white shadow-sm'>
+        <div className='lg:col-span-8 col-span-1 bg-white shadow-sm'>
           <h1 className='pl-4 pt-4 font-bold text-2xl lg:text-3xl text-gray font-inter'>
             Resources
           </h1>
@@ -54,7 +23,7 @@ const resources = ({ posts }: { posts: any }) => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
         <div className='lg:col-span-4 col-span-1'>
           <div className='relative'>
             <Qutote />

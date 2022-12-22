@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import moment from "moment";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -92,39 +90,10 @@ const PostDetail = ({ post }: any) => {
     }
   };
 
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    }
-  }, [control, inView]);
-
-  const boxVariant = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeIn",
-        type: "spring",
-        stiffness: 50,
-        delay: 0.2,
-      },
-    },
-    hidden: { y: 20, opacity: 0 },
-  };
-
   const shareUrl = post.slug;
 
   return (
-    <motion.div
-      variants={boxVariant}
-      initial='hidden'
-      ref={ref}
-      animate={control}
-      className='bg-white shadow-sm rounded-sm pb-12 mb-8 mt-8 lg:mt-0'>
+    <div className='bg-white shadow-sm rounded-sm pb-12 mb-8 mt-8 lg:mt-0'>
       <div className='px-0 lg:px-0 pt-5'>
         <p className='px-6 uppercase text-xs mb-1'>{post.categories[0].name}</p>
         <h1 className='px-6 text-2xl lg:text-3xl text-gray font-semibold mb-2 tracking-normal font-inter'>
@@ -185,7 +154,7 @@ const PostDetail = ({ post }: any) => {
           return getContentFragment(index, children, typeObj, typeObj.type);
         })}
       </div>
-    </motion.div>
+    </div>
   );
 };
 
