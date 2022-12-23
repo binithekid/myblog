@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import moment from "moment";
 
 const WideCard = ({ post }: { post: any }) => {
   return (

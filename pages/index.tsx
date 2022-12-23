@@ -37,10 +37,12 @@ const Home: NextPage = ({ posts }: any) => {
                       className={`lg:mx-0 mx-4 lg:mb-5 lg:mr-3 shadow-sm lg:mt-0 rounded-b-sm bg-white ${
                         gridItems.length - 1 === i ? "mb-0" : "mb-10"
                       }`}>
-                      <img
-                        className='lg:p-2 mb-3 lg:mb-0 object-top object.cover'
-                        src={gridItem.node.featuredImage?.url}
-                      />
+                      <Link href={`/post/${gridItem.node.slug}`}>
+                        <img
+                          className='lg:p-2 mb-3 lg:mb-0 object-cover h-56 w-full cursor-pointer transition hover:opacity-60 ease-in-out duration-500'
+                          src={gridItem.node.featuredImage?.url}
+                        />
+                      </Link>
                       <div className='ml-3'>
                         <span className='text-xs uppercase mb-1 text-slate-600 lg:hidden'>
                           {gridItem.node.categories[0].name}
