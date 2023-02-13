@@ -17,7 +17,7 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&display=swap'
             rel='stylesheet'
           />
-          <title>BenTech. </title>
+          <title>BenTech.</title>
           <link
             rel='shortcut icon'
             type='image/x-icon'

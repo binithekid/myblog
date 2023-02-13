@@ -19,7 +19,7 @@ const Categories = () => {
       <h3 className='text-lg mb-5 font-light border-b p-2 rounded-t-sm text-white bg-gradient-to-r to-gray-600 from-black'>
         Categories
       </h3>
-      {categories.map((category: Category, i) => (
+      {/* {categories.map((category: Category, i) => (
         <div
           key={category.slug}
           className={`flex items-center w-full pl-3 ${
@@ -31,7 +31,7 @@ const Categories = () => {
             </span>
           </Link>
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };
