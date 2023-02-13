@@ -59,7 +59,7 @@ const Header = () => {
         </div>
         <div className='w-full py-8 flex items-center justify-center'>
           <Link href='/'>
-            <span className='cursor-pointer -ml-1 font-bold text-3xl md:text-4xl text-gray font-inter transition ease-in-out duration-500 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-amber-200 via-red-400 to-red-500'>
+            <span className='bg-animate cursor-pointer text-3xl md:text-4xl font-CalSans transition ease-in-out duration-300 hover:opacity-60 '>
               BenTech.
             </span>
           </Link>

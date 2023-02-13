@@ -110,7 +110,7 @@ const Sidebar = ({
               </div>
             </div>
           </Link>
-          <Link href={"/watch"}>
+          {/* <Link href={"/watch"}>
             <div
               className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'
               onClick={() => setShowSidebar(!showSidebar)}>
@@ -136,8 +136,8 @@ const Sidebar = ({
                 />
               </div>
             </div>
-          </Link>
-          <Link href={"/resources"}>
+          </Link> */}
+          <Link href={"/tutorials"}>
             <div
               className='p-3 pl-5 hover:bg-gray-200 ease-in-out duration-300 cursor-pointer'
               onClick={() => setShowSidebar(!showSidebar)}>
@@ -150,7 +150,7 @@ const Sidebar = ({
                   }}
                 />
                 <span className='align-middle cursor-pointer text-lg text-zinc-800 ml-3'>
-                  Resources
+                  Tutorials
                 </span>
                 <IoChevronForward
                   color='black'

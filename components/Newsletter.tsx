@@ -34,7 +34,7 @@ const Newsletter = () => {
   });
 
   return (
-    <div className='flex flex-col lg:mx-auto shadow-md rounded-sm bg-gradient-to-r from-black via-gray-700 to-gray-500 mb-8 mx-4'>
+    <div className='flex flex-col lg:mx-auto shadow rounded bg-gradient-to-r from-black via-gray-700 to-gray-500 mb-8 mx-4'>
       <h1 className='p-4 text-xl text-white font-inter'>
         Subscribe to our newsletter!
       </h1>

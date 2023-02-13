@@ -38,13 +38,13 @@ const PostDetail = ({ post }: any) => {
         );
       case "code-block":
         return (
-          <div
-            key={index}
-            className='flex bg-slate-100 border rounded-md text-sm text-slate-700  p-3 mx-10 my-6'>
-            {modifiedText.map((item: any, i: any) => (
-              <React.Fragment key={i}>{item}</React.Fragment>
-            ))}
-          </div>
+          <pre key={index}>
+            <code className='language-javascript'>
+              {modifiedText.map((item: any, i: any) => (
+                <React.Fragment key={i}>{item}</React.Fragment>
+              ))}
+            </code>
+          </pre>
         );
       case "paragraph":
         return (

@@ -17,6 +17,17 @@ class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800;900&display=swap'
             rel='stylesheet'
           />
+          <title>BenTech. </title>
+          <link
+            rel='shortcut icon'
+            type='image/x-icon'
+            href='/images/favicon.png'
+          />
+          <meta
+            name='description'
+            content='BenTech serves as a platform to share insights and musings on the intersection of tech, self-improvement, innovation, and entrepreneurship.'
+          />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
         </Head>
         <body>
           <Main />

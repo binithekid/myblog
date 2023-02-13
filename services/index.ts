@@ -114,6 +114,7 @@ export const getSimilarPosts = async (categories: any, slug: any) => {
         }
         createdAt
         slug
+        read
       }
     }
   `;
@@ -160,7 +161,10 @@ export const getAdjacentPosts = async (createdAt: any, slug: any) => {
 export const getCategoryPost = async (slug: string) => {
   const query = gql`
     query GetCategoryPost($slug: String!) {
-      postsConnection(where: { categories_some: { slug: $slug } }) {
+      postsConnection(
+        where: { categories_some: { slug: $slug } }
+        orderBy: publishedAt_DESC
+      ) {
         edges {
           cursor
           node {
@@ -329,7 +333,7 @@ export const getCategoryPosts = async (name: string) => {
   const query = gql`
     query GetCategoryPosts($name: String!) {
       category(where: { name: $name }) {
-        posts {
+        posts(orderBy: createdAt_ASC) {
           author {
             name
           }
@@ -339,6 +343,7 @@ export const getCategoryPosts = async (name: string) => {
           }
           slug
           title
+          read
         }
       }
     }

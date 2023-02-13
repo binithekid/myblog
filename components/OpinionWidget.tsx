@@ -6,12 +6,12 @@ const Opinion = () => {
   const [opinions, setOpinions] = useState([]);
 
   useEffect(() => {
-    getCategoryPosts("Thoughts").then((result) => setOpinions(result.posts));
+    getCategoryPosts("News").then((result) => setOpinions(result.posts));
   }, []);
 
   return (
-    <div className='bg-white mb-8 rounded-sm hidden lg:block'>
-      <h3 className='text-sm -mb-1 p-2 rounded-t-sm text-black'>Opinion</h3>
+    <div className='bg-white mb-8 rounded shadow hidden lg:block'>
+      <h3 className='text-sm -mb-1 p-2 rounded-t-sm text-black'>News</h3>
       <hr className='mb-3 mx-2' />
       {opinions.length > 0 &&
         opinions.map((post: any, i) => (

@@ -4,26 +4,25 @@ import { getCategoryPost } from "../services";
 import WideCard from "../components/WideCard";
 import { NextSeo } from "next-seo";
 
-const opinion = ({ posts }: { posts: any }) => {
+const tutorials = ({ posts }: { posts: any }) => {
   return (
     <>
-      <NextSeo title='Opinion | Bentech.' />
+      <NextSeo title='Tutorials | Bentech.' />
       <div className='container mx-auto mb-8 lg:mt-0 mt-4 px-4 lg:px-0'>
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className='lg:col-span-8 col-span-1 bg-white shadow-sm'>
             <h1 className='pl-4 pt-4 font-bold text-2xl lg:text-3xl text-gray font-inter'>
-              Opinion
+              Tutorials
             </h1>
             <p className='text-sm pl-4 mb-1 text-slate-600 '>
-              Commenting on different topics of conversation from across the
-              world of tech
+              Some tutorials of things you may find useful!
             </p>
             <hr className='mb-6 mx-4 w-1/6 mt-1' />
             <div>
-              {posts.map((post: any, i: number) => (
+              {posts?.map((post: any, i: number) => (
                 <div className='px-4'>
                   <WideCard post={post} key={i} />
-                  {posts?.length - 1 === i ? null : <hr />}
+                  {posts.length - 1 === i ? null : <hr />}
                 </div>
               ))}
             </div>
@@ -39,11 +38,11 @@ const opinion = ({ posts }: { posts: any }) => {
   );
 };
 
-export default opinion;
+export default tutorials;
 
-// Fetch data at build time
-export async function getStaticProps() {
-  const posts = await getCategoryPost("opinion");
+//Fetch data at build time
+export async function getStaticProps({ params }: any) {
+  const posts = await getCategoryPost("tutorial");
 
   return {
     props: { posts },

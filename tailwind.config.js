@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: ["Inter Tight", ...defaultTheme.fontFamily.sans],
+        CalSans: ['"CalSans"', "sans-serif"],
       },
     },
   },

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { MdOndemandVideo } from "react-icons/md";
-import Newsletter from "../components/Newsletter";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { SubmitContact } from "../services/index";
+import { Head } from "next/document";
+import { NextSeo } from "next-seo";
 
 const contact = () => {
   const [confirmation, setConfirmation] = useState(false);
@@ -34,6 +35,7 @@ const contact = () => {
 
   return (
     <>
+      <NextSeo title='Contact | Bentech.' />
       <div className='container mx-auto mb-12 flex flex-col md:flex-row'>
         <div className='mt-8 w-full md:w-1/3 flex flex-col px-10 md:mt-4 md:px-4'>
           <h1 className='font-bold text-3xl lg:text-4xl text-gray font-inter'>
@@ -52,20 +54,9 @@ const contact = () => {
                 marginRight: "10px",
               }}
             />
-            <p className='text-2xl'>info@truthseekers.com</p>
+            <p className='text-2xl'>bentech91@gmail.com</p>
           </div>
 
-          <div className='flex flex-row mt-5'>
-            <FaInstagram
-              style={{
-                color: "black",
-                marginTop: "5px",
-                fontSize: "1.5rem",
-                marginRight: "10px",
-              }}
-            />
-            <p className='text-2xl'>truthseekerstv</p>
-          </div>
           <div className='flex flex-row mt-5'>
             <FaTwitter
               style={{
@@ -75,7 +66,7 @@ const contact = () => {
                 marginRight: "10px",
               }}
             />
-            <p className='text-2xl'>truthseekerstv_</p>
+            <p className='text-2xl'>@BenTech1_</p>
           </div>
           <div className='flex flex-row mt-5'>
             <MdOndemandVideo
@@ -86,7 +77,7 @@ const contact = () => {
                 marginRight: "10px",
               }}
             />
-            <p className='text-2xl'>Truth Seekers</p>
+            <p className='text-2xl'>BenTech - channel coming soon</p>
           </div>
         </div>
         <div className='w-full md:w-2/3 mt-4 flex flex-col'>
