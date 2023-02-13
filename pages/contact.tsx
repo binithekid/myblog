@@ -5,7 +5,6 @@ import { MdOndemandVideo } from "react-icons/md";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { SubmitContact } from "../services/index";
-import { Head } from "next/document";
 import { NextSeo } from "next-seo";
 
 const contact = () => {

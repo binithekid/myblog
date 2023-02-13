@@ -27,7 +27,6 @@ class MyDocument extends Document {
             name='description'
             content='BenTech serves as a platform to share insights and musings on the intersection of tech, self-improvement, innovation, and entrepreneurship.'
           />
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
         </Head>
         <body>
           <Main />
