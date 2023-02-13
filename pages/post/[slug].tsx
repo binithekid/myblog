@@ -20,33 +20,29 @@ const PostDetails = ({ post }: any) => {
     return <Loader />;
   }
 
-  return (
-    <>
-      <NextSeo title={`${post.title}| Bentech.`} description={post.excerpt} />
+  // <NextSeo title={`${post.title}| Bentech.`} description={post.excerpt} />;
 
-      <div className='container mx-auto mb-8'>
-        <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-          <div className='col-span-1 lg:col-span-8'>
-            <PostDetail post={post} />
-            <CommentsForm slug={post.slug} />
-            <Comments slug={post.slug} />
-          </div>
-          <div className='col-span-1 lg:col-span-4'>
-            <div className='relative'>
-              <Qutote />
-              <PostWidget
-                slug={post.slug}
-                categories={post.categories.map(
-                  (category: any) => category.slug
-                )}
-              />
-              <Newsletter />
-              <Socials />
-            </div>
+  return (
+    <div className='container mx-auto mb-8'>
+      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
+        <div className='col-span-1 lg:col-span-8'>
+          <PostDetail post={post} />
+          <CommentsForm slug={post.slug} />
+          <Comments slug={post.slug} />
+        </div>
+        <div className='col-span-1 lg:col-span-4'>
+          <div className='relative'>
+            <Qutote />
+            <PostWidget
+              slug={post.slug}
+              categories={post.categories.map((category: any) => category.slug)}
+            />
+            <Newsletter />
+            <Socials />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
