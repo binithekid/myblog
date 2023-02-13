@@ -9,7 +9,7 @@ const HomePageFeature = () => {
       <div className='flex flex-nowrap overflow-hidden px-4 lg:p-0 mt-4 lg:mt-0'>
         <div className='flex flex-col lg:flex-row lg:h-96 w-full mb-8 gap-2 bg-white shadow-sm lg:shadow-sm transition-transform rounded-md'>
           <div className='lg:w-1/2'>
-            <Link href={`/post/first-post`}>
+            <Link href={`/post/css-gradient-text-animation`}>
               <img
                 src={gradient.src}
                 className='cursor-pointer hover:opacity-70 transition ease-in-out duration-300 lg:h-96 object-cover w-full rounded-l '
