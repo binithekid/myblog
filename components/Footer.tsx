@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
-import Opinion from "./OpinionWidget";
+import Logo from "../public/LogoWhite.png";
 
 const Footer = () => {
   const categories = [
@@ -16,11 +16,12 @@ const Footer = () => {
     <div className='flex w-full flex-col bg-black mx-auto px-4 lg:px-10'>
       <div className='flex flex-start pl-4 flex-col'>
         <Link href='/'>
-          <h1 className='cursor-pointer mt-10 font-bold text-3xl text-white font-CalSans tracking-wider  transition ease-in-out duration-500 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-amber-200 via-red-400 to-red-500'>
-            BenTech.
-          </h1>
+          <img
+            src={Logo.src}
+            className='w-24 md:w-32 mt-5 cursor-pointer transition hover:opacity-70'
+          />
         </Link>
-        <p className='text-white text-xs lg:text-sm font-light lg:w-1/2 mt-2'>
+        <p className='text-white text-xs lg:text-sm font-light lg:w-1/2'>
           BenTech serves as a platform to share insights and musings on the
           intersection of tech, self-improvement, innovation, and
           entrepreneurship. From my own personal journey of becoming a Full

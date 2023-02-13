@@ -83,48 +83,6 @@ a {
   font-style: normal;
 }
 
-.bg-animate {
-  background-image: linear-gradient(
-    to right,
-    black,
-    black,
-    rgb(9, 23, 61),
-    rgb(38, 70, 176),
-    rgb(26, 59, 169),
-    rgb(23, 50, 137),
-    rgb(9, 36, 93),
-    black,
-    black
-  );
-  background-size: 500% 100%;
-  animation: bgChange 20s ease-in-out infinite;
-  line-height: 1;
-  color: transparent;
-  background-clip: text;
-  margin-left: 13px;
-}
-
-@keyframes bgChange {
-  0% {
-    background-position: 0% 0%, 100% 0%, 200% 0%, 300% 0%, 400% 0%;
-  }
-  20% {
-    background-position: -100% 0%, 0% 0%, 100% 0%, 200% 0%, 300% 0%;
-  }
-  40% {
-    background-position: -200% 0%, -100% 0%, 0% 0%, 100% 0%, 200% 0%;
-  }
-  60% {
-    background-position: -300% 0%, -200% 0%, -100% 0%, 0% 0%, 100% 0%;
-  }
-  80% {
-    background-position: -400% 0%, -300% 0%, -200% 0%, -100% 0%, 0% 0%;
-  }
-  100% {
-    background-position: -500% 0%, -400% 0%, -300% 0%, -200% 0%, -100% 0%;
-  }
-}
-
 pre {
   display: flex;
   background-color: #f6f8fa;

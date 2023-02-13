@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FiMenu } from "react-icons/fi";
 import Sidebar from "./Sidebar";
+import Logo from "../public/betechlogo.png";
 
 const Header = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -31,7 +32,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className='mx-auto px-4 lg:px-10 md:h-8 bg-black flex items-center justify-end h-12'>
+      <div className='mx-auto px-4 lg:px-10 md:h-8 bg-black flex items-center justify-end h-7'>
         <div className='flex flex-row md:contents '>
           <Link href='https://www.bbc.co.uk/sport/football'>
             <span className='text-gray ml-4 cursor-pointer font-light hover:opacity-70'>
@@ -59,9 +60,10 @@ const Header = () => {
         </div>
         <div className='w-full py-8 flex items-center justify-center'>
           <Link href='/'>
-            <span className='bg-animate cursor-pointer text-3xl md:text-4xl font-CalSans transition ease-in-out duration-300 hover:opacity-60 '>
-              BenTech.
-            </span>
+            <img
+              src={Logo.src}
+              className='w-32 md:w-36 cursor-pointer transition hover:opacity-70'
+            />
           </Link>
         </div>
       </div>
