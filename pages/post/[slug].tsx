@@ -20,8 +20,6 @@ const PostDetails = ({ post }: any) => {
     return <Loader />;
   }
 
-  <NextSeo title={`${post.title}| Bentech.`} description={post.excerpt} />;
-
   return (
     <>
       <NextSeo title={`${post.title}| Bentech.`} description={post.excerpt} />

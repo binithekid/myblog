@@ -25,7 +25,17 @@ const PostDetail = ({ post }: any) => {
       if (obj.underline) {
         modifiedText = <u key={index}>{text}</u>;
       }
+
+      if (obj.code) {
+        modifiedText = (
+          <span className='codeBlock' key={index}>
+            {text}
+          </span>
+        );
+      }
     }
+
+    console.log(type);
 
     switch (type) {
       case "heading-three":
